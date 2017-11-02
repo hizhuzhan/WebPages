@@ -1,0 +1,305 @@
+#header_menu,#header_menu img {
+	width: 50px;
+	height: 50px
+}
+
+#header,#header a,#header a:link,#header a:visited {
+	color: #FFF
+}
+
+#header .sns span,#header_menu {
+	transition: .2s ease;
+	cursor: pointer
+}
+
+#header .sns span:hover,#header_menu:hover {
+	opacity: .6
+}
+
+#bt_back,#header,#header_menu {
+	position: absolute;
+	top: 0;
+	font-family: Lato
+}
+
+#header,#pc,#support_ng,#support_ok {
+	display: none
+}
+
+#scene1 h1,#scene1 h2,body,html {
+	font-weight: 600
+}
+
+#bt_back,#header,#header_menu,#scene1 .param,#scene1 h1,#scene_loading,.select_box {
+	font-family: Lato
+}
+
+body,html {
+	letter-spacing: 1.2px;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	height: 100%
+}
+
+body {
+	overflow: hidden
+}
+
+#header_menu {
+	z-index: 1000;
+	right: 0
+}
+
+#header {
+	z-index: 1001;
+	width: 100%;
+	background: #000
+}
+
+#header a:active,#header a:hover {
+	color: #F9C
+}
+
+#header .sns {
+	padding-top: 10px;
+	padding-bottom: 6px;
+	background: #222
+}
+
+#header .sns span {
+	margin-left: 6px;
+	margin-right: 6px
+}
+
+#header .credits,#header .info {
+	font-size: .9rem;
+	line-height: 1.7
+}
+
+#header .credits {
+	margin: 8px 0
+}
+
+#header .info {
+	background: #222;
+	margin: 8px 0;
+	padding: 4px 0
+}
+
+#header #bt_close {
+	cursor: pointer;
+	padding: 10px 0
+}
+
+#header .close {
+	transition: .35s ease
+}
+
+#header #bt_close:hover>.close {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg)
+}
+
+#scene1,#scene2,#scene3,#scene_loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	width: 85%
+}
+
+#scene_loading {
+	font-size: 2rem;
+	letter-spacing: 2.5px;
+	display: none
+}
+
+#bt_back {
+	font-size: 1.2rem;
+	margin: 10px;
+	text-align: left;
+	cursor: pointer;
+	z-index: 200
+}
+
+#scene1 h1 {
+	font-size: 2.4rem;
+	line-height: 1.2
+}
+
+#scene1 h2 {
+	font-size: .8rem;
+	margin-top: 5px;
+	margin-bottom: 10px
+}
+
+.select_par {
+	margin-top: 30px;
+	white-space: nowrap
+}
+
+.select_set {
+	display: inline-block
+}
+
+#scene1 .param {
+	margin-bottom: 3px;
+	font-size: .8rem;
+	letter-spacing: 0
+}
+
+.select_box {
+	max-width: 350px;
+	margin: 0 auto;
+	position: relative;
+	font-size: .8rem
+}
+
+.select_box select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #999;
+	background: url(../img/select.png) right 50% no-repeat #000;
+	background-size: auto 120%;
+	color: #fff
+}
+
+#bt_play,#bt_start {
+	background: #000;
+	font-family: Lato;
+	cursor: pointer
+}
+
+.select_box option {
+	margin: 8px
+}
+
+select::-ms-expand {
+	display: none
+}
+
+#bt_start {
+	font-size: 2rem;
+	letter-spacing: 2.5px;
+	color: #FFF;
+	width: 240px;
+	margin: 30px auto 0;
+	position: relative;
+	transition: .2s ease
+}
+
+#bt_back:hover,#bt_start:hover {
+	background: #F9C
+}
+
+#scene1 .sound {
+	margin-top: 10px;
+	font-size: .8rem;
+	color: #C00
+}
+
+.watch {
+	margin-top: 25px
+}
+
+#scene1 #pc .atten,#scene1 #support_ng .atten {
+	margin-top: 30px;
+	color: #c00
+}
+
+#scene1 .qr {
+	margin-top: 30px
+}
+
+#scene1 .qr_url {
+	margin-top: 5px;
+	font-size: 1rem
+}
+
+#scene2,#scene3 {
+	display: none
+}
+
+#bt_play {
+	width: 200px;
+	height: 200px;
+	color: #FFF;
+	border-radius: 100px;
+	font-size: 2rem;
+	margin: 0 auto;
+	line-height: 200px;
+	animation: animScale 1s ease-in-out alternate infinite;
+	-webkit-animation: animScale 1s ease-in-out alternate infinite
+}
+
+@keyframes animScale {
+	0.00% {
+		transform: scale(1,1)
+	}
+
+	100% {
+		transform: scale(1.2,1.2)
+	}
+}
+
+@-webkit-keyframes animScale {
+	0.00% {
+		-webkit-transform: scale(1,1)
+	}
+
+	100% {
+		-webkit-transform: scale(1.2,1.2)
+	}
+}
+
+#scene3 p {
+	animation: shake .4s ease-in-out alternate infinite;
+	-webkit-animation: shake .4s ease-in-out alternate infinite
+}
+
+@keyframes shake {
+	0.00% {
+		transform: translateY(-15px)
+	}
+
+	100% {
+		transform: translateY(15px)
+	}
+}
+
+@-webkit-keyframes shake {
+	0.00% {
+		-webkit-transform: translateY(-15px)
+	}
+
+	100% {
+		-webkit-transform: translateY(15px)
+	}
+}
+
+@media (max-width:640px) {
+	#scene1 h1 {
+		font-size: 2rem
+	}
+
+	#scene1 .sound,#scene1 h2 {
+		font-size: .7rem
+	}
+
+	.watch {
+		font-size: .8rem
+	}
+}
+
+@media (max-height:420px) {
+	.select_par,.watch {
+		margin-top: 15px
+	}
+}

@@ -142,9 +142,10 @@ $(function() {
         d.play(0, !0, u);
         d.speed = 1E-4;
         d.volume = 1
+
     });
     $("#bt_back").click(function(a) {
-        if (0 == m) location.href = "../contents";
+        if (0 == m) location.href = "../../index.html";
         else {
             c && c.play(0, !0);
             m = 0;

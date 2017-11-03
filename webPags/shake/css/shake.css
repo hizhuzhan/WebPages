@@ -168,7 +168,8 @@ body {
 	border: 1px solid #999;
 	background: url(../img/select.png) right 50% no-repeat #000;
 	background-size: auto 120%;
-	color: #fff
+	color: #fff;
+	/*text-align: center;*/
 }
 
 #bt_play,#bt_start {
@@ -178,7 +179,7 @@ body {
 }
 
 .select_box option {
-	margin: 8px
+	margin: 8px;
 }
 
 select::-ms-expand {

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Trembling words</title>
+  <link rel="shortcut icon" href="../../img/title.ico"/>
+  <link charset="UTF-8" href="css/common.css" rel="stylesheet" />
+  <link charset="utf-8" href="css/ugomoji.css?1" rel="stylesheet" />
+  <script charset="UTF-8" src="js/lib.js" type="text/javascript"></script>
+  <script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.4.4/pixi.min.js" type="text/javascript"></script>
+  <script charset="UTF-8" src="js/common.js" type="text/javascript"></script>
+  <script charset="utf-8" src="js/ugomoji.js?2" type="text/javascript"></script>
+ </head>
+ <body>
+  <div id="main">
+   <div id="view"></div>
+   <div id="input_area">
+     请输入:
+    <br />
+    <textarea name="input_text" id="input_box" rows="5" cols="32"></textarea>
+    <span></span>
+   </div>
+   <div id="create">
+    GIF生成
+   </div>
+   <div id="option">
+    <p>OPTION</p>
+    <div id="select_type">
+      方式:
+     <br />
+     <select name="select_type_name" id="select_type_id">
+       <option value="0">颤抖</option>
+       <option value="1">巨颤抖</option>
+       <option value="2">左进入</option>
+       <option value="3">右进入</option>
+       <option value="4">上进入</option>
+       <option value="5">下进入</option>
+       <option value="6">左路过</option>
+       <option value="7">右路过</option>
+     </select>
+    </div>
+    <div id="select_color">
+      文字色:
+     <br>
+     <span class="c_000000"><p></p></span>
+     <span class="c_ffffff"><p></p></span>
+     <span class="c_ff3300"><p></p></span>
+     <span class="c_ff66cc"><p></p></span>
+     <span class="c_b65519"><p></p></span>
+     <span class="c_ff8800"><p></p></span>
+     <span class="c_ffdd00"><p></p></span>
+     <br>
+     <span class="c_666666"><p></p></span>
+     <span class="c_bbbbbb"><p></p></span>
+     <span class="c_00cc00"><p></p></span>
+     <span class="c_009966"><p></p></span>
+     <span class="c_0099ff"><p></p></span>
+     <span class="c_0066ff"><p></p></span>
+     <span class="c_a84ec4" style="margin-right: 8px"><p></p></span>
+    </div>
+    <div id="select_bg_color">
+      背景色:
+     <br />
+     <span class="c_000000"><p></p></span>
+     <span class="c_ffffff"><p></p></span>
+     <span class="c_ff3300"><p></p></span>
+     <span class="c_ff66cc"><p></p></span>
+     <span class="c_b65519"><p></p></span>
+     <span class="c_ff8800"><p></p></span>
+     <span class="c_ffdd00"><p></p></span>
+     <br />
+     <span class="c_666666"><p></p></span>
+     <span class="c_bbbbbb"><p></p></span>
+     <span class="c_00cc00"><p></p></span>
+     <span class="c_009966"><p></p></span>
+     <span class="c_0099ff"><p></p></span>
+     <span class="c_0066ff"><p></p></span>
+     <span class="c_a84ec4" style="margin-right: 8px"><p></p></span>
+    </div>
+   </div>
+   <div>
+    <img src="img/gif_area.png" id="image" />
+   </div>
+   <div id="download_area">
+    <div id="download_off">
+     下载啊
+    </div>
+   </div>
+   <div id="no_attention">
+    如果保存不成功<br>
+    请右键点击保存
+   </div>
+  </div>
+  <div id="footer">
+    <div class="line"></div>
+  <div id="back">
+      <a href="http://www.baidu.com">
+        <div id="bt_back">
+        BACK
+        </div>
+      </a>
+  </div>
+  </div>
+ </body>
+</html>

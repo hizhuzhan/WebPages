@@ -45,6 +45,13 @@ $('#search').on('click', function () {
     openSearchPage();
 });
 
+$('#_index_page_list').children().click(function(){
+    if($(this).data('msg') != 'noClick'){
+        $('#_index_page_list').find('li').removeClass('_index_page_list_click_style');
+        $(this).addClass('_index_page_list_click_style');
+    }
+
+});
 
 /**
  * 添加小红杠
@@ -110,6 +117,7 @@ var showNavChangePage = function (navId) {
             break;
     }
 }
+
 /**
  * 右侧列表
  * @param pageType

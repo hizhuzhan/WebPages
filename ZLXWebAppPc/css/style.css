@@ -38,7 +38,13 @@
     text-align: center;
     width: 9%;
 }
-._index>._title>.wrapper>.col-xs-12>ul>li:hover>div{
+/*._index>._title>.wrapper>.col-xs-12>ul>li:hover>div{*/
+    /*width: 55px;*/
+    /*height: 4px;*/
+    /*background-color: rgba(195, 0, 42, 1);*/
+    /*margin: -14px auto 0;*/
+/*}*/
+._index_page_list_click_style{
     width: 55px;
     height: 4px;
     background-color: rgba(195, 0, 42, 1);

@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>中国戏曲学院·图书馆</title>
+</head>
+<style>
+    ._index>._search>.wrapper>.col-xs-12>div{
+        width: 608px;
+        margin: 0 auto;
+        font-size: 12px;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(1){
+        margin: 40px 0 45px 0;
+        text-align: center;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(2)>ul{
+        width: 100%;
+        font-weight: 600;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(2)>ul>li{
+        text-align: left;
+        width: 50px;
+        margin-right: 30px;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(2)>ul>li:last-child{
+        width: 40px;
+        margin-right: 0;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(2)>div>input{
+        width: 549px;
+        height: 24px;
+        float: left;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(2)>div>div{
+        width: 57px;
+        height: 24px;
+        float: right;
+        text-align: center;
+        background-color: #448aca;
+        color: #fff;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(2)>div>div>p{
+        line-height: 24px;
+    }
+
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(3){
+        margin-top: 115px;
+        color: #686869;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(3)>div{
+        width: 83px;
+        height: 20px;
+        border: 1px solid #777777;
+        margin-top: -18px;
+        margin-left: 55px;
+        text-align: center;
+        color: #435fb9;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(3)>div>img{
+        margin-left: 20px;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(4){
+        margin-top: 27px;
+        color: #686869;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(4) label
+    {
+        margin-top: -39px;
+        margin-left: 180px;
+        line-height: 20px;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(4) ._radio_02{
+        margin-left: 20px;
+    }
+
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(4)>div{
+        width: 83px;
+        height: 20px;
+        border: 1px solid #777777;
+        margin-top: -18px;
+        margin-left: 55px;
+        text-align: center;
+        color: #435fb9;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(4)>div>img{
+        margin: 0 5px;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(5){
+        margin-top: 27px;
+        color: #686869;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(5){
+        margin-left: 4px;
+        line-height: 20px;
+    }
+
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(6){
+        margin-top: 55px;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(6) p:nth-child(1){
+        color: #686869;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(6) p:nth-child(1)>span{
+        color: #c60e36;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(6) ._link>span{
+        color: #573e77;
+        text-decoration: underline;
+    }
+    ._index>._search>.wrapper>.col-xs-12>div>div:nth-child(6) p:nth-child(2){
+        margin-bottom: 5px;
+    }
+
+
+</style>
+<body class="_index">
+    <!-- title start -->
+    <div class="row _title">
+        <div class="wrapper wrapper-content ">
+            <div class="col-xs-12">
+                <ul id="nav" class="nav navbar-nav">
+                    <li>
+                        <img src="image/logo.png">
+                    </li>
+                    <li id="index">
+                        <p>首页</p>
+                        <div class="redLine"></div>
+                    </li>
+                    <li id="introduce">
+                        <p>本馆介绍</p>
+                        <div></div>
+                    </li>
+                    <li id="system">
+                        <p>规章制度</p>
+                        <div></div>
+                    </li>
+                    <li id="service">
+                        <p>读者服务</p>
+                        <div></div>
+                    </li>
+                    <li id="notice">
+                        <p>新书通报</p>
+                        <div></div>
+                    </li>
+                    <li id="contact">
+                        <p>联系我们</p>
+                        <div></div>
+                    </li>
+                    <li id="download">
+                        <p>下载专区</p>
+                        <div></div>
+                    </li>
+                    <li>
+                        <input id="search" type="text" placeholder="请输入关键字">
+                        <span>
+                            <img src="image/index_search.png">
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- title end -->
+
+    <!-- index page start -->
+    <div class="row _header _index_page _page">
+        <div class="wrapper wrapper-content ">
+            <div class="col-xs-12">
+                <div class="img_div">
+                    <div id="_img_div_head" class="img_div_head">
+                        <p>www.nacta.edu.cn</p>
+                        <div><p>学院主页</p></div>
+                    </div>
+                    <img id="_index_title" class="index_title" src="image/index_title.png">
+                    <img id="_index_details" class="index_details" src="image/index_details.png">
+                    <img id="_index_head" class="index_head" src="image/index_head.jpg" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row _content _index_page _page">
+        <div class="wrapper wrapper-content">
+            <div class="col-xs-12">
+                <div class="nav_div">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <img src="image/index_01.jpg" class="img-responsive">
+                            <div>
+                                <div>
+                                    <p>图书馆公告</p>
+                                    <p>Library Bulletin</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="image/index_02.jpg" class="img-responsive">
+                            <div>
+                                <div>
+                                    <p>【读者信息检索】</p>
+                                    <p>Library Bulletin</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="image/index_03.jpg" class="img-responsive">
+                            <div>
+                                <div>
+                                    <p>【高校网络共享资源】</p>
+                                    <p>Library Bulletin</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="image/index_04.jpg" class="img-responsive">
+                            <div>
+                                <div>
+                                    <p>【试用资源】</p>
+                                    <p>Library Bulletin</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="image/index_05.jpg" class="img-responsive">
+                            <div>
+                                <div>
+                                    <p>【馆藏中文电子资源】</p>
+                                    <p>Library Bulletin</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="image/index_06.jpg" class="img-responsive">
+                            <div>
+                                <div>
+                                    <p>【馆藏目录检索】</p>
+                                    <p>Library Bulletin</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="image/index_07.jpg" class="img-responsive">
+                            <div>
+                                <div>
+                                    <p>【馆藏外文电子资源】</p>
+                                    <p>Library Bulletin</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="image/index_video.jpg" class="img-responsive">
+                            <div>
+                                <div>
+                                    <p>【馆藏视频】</p>
+                                    <p>Library Bulletin</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <p>相关链接</p>
+                                    <p>戏曲戏剧网站</p>
+                                    <p>高校图书馆</p>
+                                    <p>公共图书馆</p>
+                                    <p>梨园书店</p>
+                                    <p>北京高校网络图书馆</p>
+                                </li>
+                                <li>
+                                    <p>中央戏剧学院图书馆</p>
+                                    <p>上海戏剧学院图书馆</p>
+                                    <p>山东艺术学院图书馆</p>
+                                    <p>云南艺术学院图书馆</p>
+                                    <p>北京戏曲艺术职业学院</p>
+                                </li>
+                                <li>
+                                    <p>天津戏曲艺术职业学院</p>
+                                    <p>浙江艺术职业学院图书馆</p>
+                                    <p>广东舞蹈戏剧职业学院</p>
+                                    <p>湖北艺术职业学院图书馆</p>
+                                    <p>安徽黄梅戏艺术职业学院</p>
+                                </li>
+                                <li>
+                                    <p>上海戏剧学院附属戏曲学校 </p>
+                                    <p>江苏省戏剧学校</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- index page end -->
+
+    <!-- introduce page start -->
+    <div class="row _content _page _introduce_page _system_page _service_page _notice_page _contact_page _download_page">
+        <div class="wrapper wrapper-content">
+            <div class="col-xs-8">
+                <div>
+                    <span id="_content_path"></span>
+                </div>
+                <div>
+                    <div>
+                        <span id="_content_title"></span>
+                    </div>
+                    <div id="_info_content">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div>
+                    <div class="_right_title">
+                        <span>本馆介绍</span>
+                        <img src="image/line.png">
+                    </div>
+                    <div id="_info_list"></div>
+                    <div id="_info_list_script" class="hide"></div>
+                </div>
+                <div>
+                    <div class="_right_title">
+                        <span>相关链接</span>
+                        <img src="image/line.png">
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <p>戏曲戏剧网站</p>
+                            </li>
+                            <li>
+                                <p>高校图书馆</p>
+                            </li>
+                            <li>
+                                <p>公共图书馆</p>
+                            </li>
+                            <li>
+                                <p>梨园书店</p>
+                            </li>
+                            <li>
+                                <p>北京高校网络图书馆</p>
+                            </li>
+                            <li>
+                                <p>中央戏剧学院图书馆</p>
+                            </li>
+                            <li>
+                                <p>上海戏剧学院图书馆</p>
+                            </li>
+                            <li>
+                                <p>山东艺术学院图书馆</p>
+                            </li>
+                            <li>
+                                <p>云南艺术学院图书馆</p>
+                            </li>
+                            <li>
+                                <p>北京戏曲艺术职业学院</p>
+                            </li>
+                            <li>
+                                <p>天津戏曲艺术职业学院</p>
+                            </li>
+                            <li>
+                                <p>浙江艺术职业学院图书馆</p>
+                            </li>
+                            <li>
+                                <p>广东舞蹈戏剧职业学院</p>
+                            </li>
+                            <li>
+                                <p>湖北艺术职业学院图书馆</p>
+                            </li>
+                            <li>
+                                <p>安徽黄梅戏艺术职业学院</p>
+                            </li>
+                            <li>
+                                <p>上海戏剧学院附属戏曲学校</p>
+                            </li>
+                            <li>
+                                <p>江苏省戏剧学校</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- introduce page end -->
+
+    <!-- search page start -->
+    <div class="row _search _page">
+        <div class="wrapper wrapper-content">
+            <div class="col-xs-12">
+                <div>
+                    <div>
+                        <img src="image/search_head_title.png">
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <p style="color: #c60e36">简单检索</p>
+                            </li>
+                            <li>
+                                <p>多库检索</p>
+                            </li>
+                            <li>
+                                <p>高级检索</p>
+                            </li>
+                            <li>
+                                <p>分类浏览</p>
+                            </li>
+                            <li>
+                                <p>新书新刊</p>
+                            </li>
+                            <li>
+                                <p>期刊导航</p>
+                            </li>
+                            <li>
+                                <p>信息发布</p>
+                            </li>
+                            <li>
+                                <p>更多<img style="margin: 0 3px" src="image/search_open.png"></p>
+                            </li>
+                        </ul>
+                        <div>
+                            <input>
+                            <div><p>检  索</p></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span>检索词：</span>
+                        <div>
+                            <p>题名<img style="margin: 0 3px" src="image/search_open.png"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <span>排&#12288;序：</span>
+                        <div>
+                            <p>出版时间<img style="margin: 0 3px" src="image/search_open.png"></p>
+                        </div>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 升序
+                        </label>
+                        <label class="radio-inline _radio_02">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 降序
+                        </label>
+                    </div>
+                    <div>
+                        <span>格&#12288;式：</span>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1"> 详细显示
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option2"> 表格显示
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option3"> 表格封面显示
+                        </label>
+                    </div>
+                    <div>
+                        <p>热门检索<span>Hot~</span></p>
+                        <p class="_link"><span>剧本</span>&#12288;&#12288;<span>昆剧</span>&#12288;&#12288;<span>京剧</span>&#12288;&#12288;<span>梅兰芳</span>&#12288;&#12288;<span>牡丹亭</span></p>
+                        <p class="_link"><span>莎士比亚</span>&#12288;&#12288;<span>戏剧</span>&#12288;&#12288;<span>史记</span>&#12288;&#12288;<span>艺术的故事</span>&#12288;&#12288;<span>王瑶卿</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search page end -->
+
+    <!-- footer start -->
+    <div class="row _footer _page _index_page _introduce_page _system_page _service_page _notice_page _contact_page _download_page">
+        <div class="wrapper wrapper-content ">
+            <div class="col-xs-12">
+
+                <div>
+                    <div id="_search_footer_info" class="hide">
+                        <p>您是第<span class="_user_count">1234</span>位访客</p>
+                        <p>版权所有：2008-2018 北京清大新洋科技有限公司 TEL：4008100819 http://www.infosea.com.cn <span class="_search_help">使用说明</span></p>
+                        <p class="_search_footer_list">我的图书馆&#12288;读者荐购&#12288;公告与留言&#12288;热门信息&#12288;登陆</p>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <img src="image/logo.png">
+                        </li>
+                        <li>
+                            <img src="image/QRcode.png">
+                        </li>
+                        <li>
+                            <p>中国戏曲学院－图书馆  </p>
+                            <p>电话：010-63351525  传真：010-63351525  邮编：100073</p>
+                            <p>地址：北京市丰台</p>
+                            <p>当前共378人访问</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</html>

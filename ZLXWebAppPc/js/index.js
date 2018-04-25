@@ -14,6 +14,12 @@ $(function () {
  */
 $('#index').on('click', function () {
     addRedLine(this);
+    //  中国戏剧学院图书馆
+    $('#_img_div_head').show();
+    //  查看详情
+    $('#_index_title').show();
+    //  www.nacta.edu.cn
+    $('#_index_details').show();
     navChange('index');
 });
 $('#introduce').on('click', function () {

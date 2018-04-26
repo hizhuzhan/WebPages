@@ -13,134 +13,54 @@
     <link rel="stylesheet" href="css/light7-swiper.min.css">
     <link rel="stylesheet" href="css/pageCss/login.css">
 </head>
-<style>
-    .page{
-        background-size: 100%;
-        background-image: url("image/pageImg/login_02.jpg");
-    }
-    ._body_cover{
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 163, 133, 0.3);
-    }
-    ._body_cover>img{
-        width: 90px;
-        margin: 10px auto 0 auto;
-        position: absolute;
-        left: calc(50% - 45px);
-        top: 20%;
-    }
-    /* input */
-    .list-block ul{
-        background: none;
-        border: 0;
-        width: 80%;
-        margin: 70% auto 0 auto;
-        color: #fff;
-    }
-    .list-block ul>li{
-        border-bottom: 1px solid #959595;
-    }
-    .list-block ul>li:nth-child(2){
-        margin-top: 1rem;
-    }
-    .list-block .item-inner {
-        border: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    .list-block .item-content{
-        padding-left: 0;
-    }
-    .icon-form-name{
-        text-align: center;
-    }
-    .icon-form-name>img{
-
-    }
-    .icon-form-name>._userName{
-        margin-top: 0.95rem;
-        width: 1.3rem;
-    }
-    .icon-form-name>._passWord{
-        margin-top: 0.8rem;
-        width: 0.5rem;
-    }
-    .list-block input[type=text], .list-block input[type=password]{
-        font-size: 0.8rem;
-        color: #fff;
-    }
-    .list-block .item-media+.item-inner{
-        margin-left: 0.2rem;
-    }
-    .list-block .item-input{
-        margin-top: -.4rem;
-    }
-    i.icon.icon-form-name{
-        height: 2.15rem;
-    }
-    .list-block .item-media{
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    .list-block .item-input{
-        margin-bottom: -0.9rem;
-    }
-    .content-block>.row{
-        margin-left: 0;
-    }
-    .content-block>.row>._loginButton{
-        width: 87%;
-        margin:  1rem auto 0 auto;
-    }
-    .button-danger.button-fill{
-        font-size: 0.8rem;
-        background-color: #7d0000;
-    }
-    .button-danger.button-fill:active{
-        color:#fff !important;
-        border-color:#fff !important;
-    }
-
-
-</style>
 <body>
-
 <div class="page">
+    <!-- login page start -->
+    <div class="_body_img">
+    </div>
     <div class="_body_cover">
         <img src="image/pageImg/login_logo.png">
     </div>
-    <div class="list-block">
-        <ul>
-            <!-- Text inputs -->
-            <li>
-                <div class="item-content">
-                    <div class="item-media"><i class="icon icon-form-name"><img class="_userName" src="image/pageImg/login_username_logo.png"></i></div>
-                    <div class="item-inner">
-                        <div class="item-input">
-                            <input type="text" placeholder="借阅证账号">
+    <div class="_body_form">
+        <div class="list-block">
+            <ul>
+                <!-- Text inputs -->
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-name"><img class="_userName" src="image/pageImg/login_username_logo.png"></i></div>
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input type="text" placeholder="借阅证账号">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <div class="item-content">
-                    <div class="item-media"><i class="icon icon-form-name"><img class="_passWord" src="image/pageImg/login_password_logo.png"></i></div>
-                    <div class="item-inner">
-                        <div class="item-input">
-                            <input type="password" placeholder="借阅证密码">
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-name"><img class="_passWord" src="image/pageImg/login_password_logo.png"></i></div>
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input type="password" placeholder="借阅证密码">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="content-block">
-        <div class="row">
-            <div class="_loginButton"><a href="#" class="button button-big button-fill button-danger">登陆</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="content-block">
+            <div class="row">
+                <div class="_loginButton"><a href="index.html" class="button button-big button-fill button-danger">登陆</a></div>
+            </div>
+            <div class="_logon">
+                <a>忘记密码</a>
+                <a>立即注册</a>
+            </div>
         </div>
     </div>
+    <!-- login page end -->
+
+
+
 </div>
 <script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>
 <script>

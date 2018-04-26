@@ -5,40 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>我的生活</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">-->
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="stylesheet" href="css/pageCss/loading.css">
-    <link rel="stylesheet" href="css/swiper/swiper.min.css">
-    <script>
-        /**
-         * 禁止页面上下滑动
-         */
-        document.addEventListener('touchmove', function (e) {
-            e.preventDefault()
-        })
-    </script>
+    <link rel="stylesheet" href="css/light7.min.css">
+    <link rel="stylesheet" href="css/light7-swiper.min.css">
+
+    <link rel="stylesheet" href="css/pageCss/index.css">
+
 </head>
+<style>
+    /* search input */
+    .bar>.searchbar{
+        padding-left: 0rem;
+    }
+    .searchbar{
+        background-color: #fff !important;
+    }
+    .bar-nav>.searchbar>.search-input>label{
+        color: #a16d6d;
+    }
+    .bar-nav>.searchbar>.search-input>input{
+        background-color: #f4f4f4;
+        border: 0;
+        color: #be9c9c;
+    }
+    .bar-nav>.searchbar>.search-input>input::-webkit-input-placeholder{
+        color: #be9c9c;
+    }
+    .search-input label+input{
+        padding-left: 2rem;
+    }
+
+    .bar .button-link{
+        line-height: 1.4rem;
+        color: #a16d6d;
+    }
+    /* search input */
+    /* tab01 */
+    .buttons-tab .button{
+        color: #be9c9c;
+        font-weight: 800;
+    }
+    .buttons-tab .button.active{
+        color: #be9c9c;
+    }
+    .content>.buttons-tab{
+        border: 0;
+    }
+    .buttons-tab .button.active>span{
+        display: block;
+        width: 30px;
+        border: 1px solid;
+        margin-left: auto;
+        margin-right: auto;
+        border-color: #7d0000;
+        margin-top: -2px;
+    }
+    .buttons-tab .button.active{
+        border-color: #fff;
+    }
+
+    /* tab01 */
+
+</style>
 <body>
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="image/pageImg/loading_01.jpg"></div>
-        <div class="swiper-slide"><img src="image/pageImg/loading_02.jpg"></div>
-        <div class="swiper-slide"><img src="image/pageImg/loading_03.jpg"></div>
-        <div class="swiper-slide"><img src="image/pageImg/loading_04.jpg"></div>
+<div class="page">
+    <header class="bar bar-nav">
+        <div class="searchbar row">
+            <div class="search-input col-90">
+                <label class="icon icon-search" for="search"></label>
+                <input type="search" id="search" placeholder="标题, 作者, 来源, 全文">
+            </div>
+            <a class="button button-link button-nav pull-right col-10"><span class="icon icon-menu"></span>
+            </a>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="buttons-tab">
+            <a href="#tab1" class="tab-link active button">发现<span></span></a>
+            <a href="#tab2" class="tab-link button">分类<span></span></a>
+            <a href="#tab3" class="tab-link button">排行<span></span></a>
+            <a href="#tab4" class="tab-link button">圈子<span></span></a>
+        </div>
+        <div class="content-block">
+            <div class="tabs">
+                <div id="tab1" class="tab active">
+                    <div class="content-block">
+                        <p>This is tab 1 content</p>
+                    </div>
+                </div>
+                <div id="tab2" class="tab">
+                    <div class="content-block">
+                        <p>This is tab 2 content</p>
+                    </div>
+                </div>
+                <div id="tab3" class="tab">
+                    <div class="content-block">
+                        <p>This is tab 3 content</p>
+                    </div>
+                </div>
+                <div id="tab4" class="tab">
+                    <div class="content-block">
+                        <p>This is tab 3 content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
+
+
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">首页</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-me"></span>
+            <span class="tab-label">我</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-star"></span>
+            <span class="tab-label">收藏</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-settings"></span>
+            <span class="tab-label">设置</span>
+        </a>
+    </nav>
 </div>
-<script type='text/javascript' src="js/swiper/swiper.min.js"></script>
+<script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/light7.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/light7-swiper.min.js' charset='utf-8'></script>
+
 <script src="js/pageJs/index.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: {
-            el: '.swiper-pagination'
-        }
-    });
-</script>
 </body>
 </html>

@@ -458,7 +458,8 @@
 ._index>._footer>.wrapper>.col-xs-12>div{
     width: 675px;
     height: 90px;
-    margin: 110px auto 16px;
+    margin: 110px 0 16px;
+    margin-left: 26%;
 }
 ._index>._footer>.wrapper>.col-xs-12>div>div{
     text-align: center;

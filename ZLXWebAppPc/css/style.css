@@ -456,12 +456,9 @@
 
 /* index _footer start */
 ._index>._footer>.wrapper>.col-xs-12>div{
-    width: 580px;
+    width: 50%;
     height: 90px;
     margin: 110px auto 16px;
-}
-._index>._footer>.wrapper>.col-xs-12>div>ul{
-    width: 100%;
 }
 ._index>._footer>.wrapper>.col-xs-12>div>div{
     text-align: center;
@@ -507,6 +504,9 @@
     font-size: 8px;
     color: #5a5a5a;
     font-weight: 800;
+}
+._index>._footer>.wrapper>.col-xs-12>div>ul>li:nth-child(3)>p{
+    line-height: 13px;
 }
 /* index _footer end */
 

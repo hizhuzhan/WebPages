@@ -11,10 +11,15 @@
     <link rel="stylesheet" href="css/light7.min.css">
     <link rel="stylesheet" href="css/light7-swiper.min.css">
 
+    <link href="css/iSilder/iSlider.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/pageCss/index.css">
 
 </head>
 <style>
+    .content{
+        background-color: #fff;
+    }
     /* search input */
     .bar>.searchbar{
         padding-left: 0rem;
@@ -68,6 +73,52 @@
 
     /* tab01 */
 
+    /* iSlider */
+    #_slide {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #_slide > li {
+        position: relative;
+        width: 100%;
+        height: 270px;
+        margin: 5px auto 32px;
+        background-size: cover;
+
+    }
+    .iEl {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    .iEl>ul>li {
+        border-radius: 15px;
+    }
+    #loadc {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin: -48px 0 0 -48px;
+    }
+
+    @media (max-width: 500px) {
+        #_slide > li {
+            /*width: 320px;*/
+            height: 180px;
+        }
+    }
+    ._tab01_content-block{
+        padding: 0;
+        margin: 0;
+    }
+    ._tab01_content-block>._slide_div{
+        background-color: #eaeaea;
+    }
+
+    /* iSlider */
+
 </style>
 <body>
 <div class="page">
@@ -91,21 +142,30 @@
         </div>
         <div class="content-block">
             <div class="tabs">
+                <!-- tab1 -->
                 <div id="tab1" class="tab active">
-                    <div class="content-block">
-                        <p>This is tab 1 content</p>
+                    <div class="content-block _tab01_content-block">
+                        <div class="_slide_div">
+                            <ul id="_slide"></ul>
+                        </div>
                     </div>
                 </div>
+
+                <!-- tab2 -->
                 <div id="tab2" class="tab">
                     <div class="content-block">
                         <p>This is tab 2 content</p>
                     </div>
                 </div>
+
+                <!-- tab3 -->
                 <div id="tab3" class="tab">
                     <div class="content-block">
                         <p>This is tab 3 content</p>
                     </div>
                 </div>
+
+                <!-- tab4 -->
                 <div id="tab4" class="tab">
                     <div class="content-block">
                         <p>This is tab 3 content</p>
@@ -139,6 +199,52 @@
 <script type='text/javascript' src='js/light7.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/light7-swiper.min.js' charset='utf-8'></script>
 
+<script type="text/javascript" src="js/iSlider/queue.js"></script>
+<script type="text/javascript" src="js/iSlider/iSlider.min.js"></script>
+<script type="text/javascript" src="js/iSlider/iSlider.animate.min.js"></script>
+
 <script src="js/pageJs/index.js"></script>
+
+<script>
+    var loadStep = 0;
+    var DATA = [
+        {content: "//be-fe.github.io/static/images/iSlider-card/1.jpg"},
+        {content: "//be-fe.github.io/static/images/iSlider-card/2.jpg"},
+        {content: "//be-fe.github.io/static/images/iSlider-card/3.jpg"},
+        {content: "//be-fe.github.io/static/images/iSlider-card/4.jpg"},
+        {content: "//be-fe.github.io/static/images/iSlider-card/5.jpg"},
+        {content: "//be-fe.github.io/static/images/iSlider-card/6.jpg"},
+        {content: "//be-fe.github.io/static/images/iSlider-card/7.jpg"},
+        {content: "//be-fe.github.io/static/images/iSlider-card/8.jpg"}
+    ];
+    var q = new queue();
+
+    q.awaitAll(function () {
+        setTimeout(function () {
+            init();
+        }, 1000);
+    });
+
+    function init() {
+        var mEl = document.getElementById('_slide');
+        var anims = iSlider._animateFuncs;
+        var iEl, iElWrapper, dEl;
+        iElWrapper = document.createElement('li');
+        dEl = document.createElement('p');
+        iEl = document.createElement('div');
+        iEl.className = 'iEl';
+        mEl.appendChild(iElWrapper);
+        iElWrapper.appendChild(iEl);
+        iElWrapper.appendChild(dEl);
+        new iSlider(iEl, DATA, {
+            animateType: 'flow',
+            isLooping: 1,
+            isOverspread: 1,
+            isAutoplay: 1,
+            animateTime: 2000,
+            duration: 2000
+        });
+    }
+</script>
 </body>
 </html>

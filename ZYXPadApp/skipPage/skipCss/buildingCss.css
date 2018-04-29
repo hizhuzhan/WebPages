@@ -1,0 +1,84 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide>img{
+    width: 100%;
+}
+body>._back{
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  /* background-color: rebeccapurple; */
+  z-index: 3;
+}
+body>._back>img{
+  width: 100%;
+}
+body>._infoTitle{
+  /* width: 75px; */
+  /* height: 75px; */
+  position: absolute;
+  /* background-color: peru; */
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+body>._infoTitle>img{
+  width: 100%;
+}
+body>._backIndex{
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  /* background-color: peru; */
+  z-index: 3;
+  bottom: 0;
+}
+body>._backIndex>img{
+  width: 100%;
+}
+body>._info{
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  /* background-color: red; */
+  z-index: 3;
+  bottom: 0;
+  right: 0;
+}
+body>._info>img{
+  width: 100%;
+}
+body>._infoPage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+body>._infoPage>img{
+  width: 100%;
+}
+body>._infoPage>div{
+  width: 70px;
+  height: 70px;
+  /* background-color: red; */
+  position: absolute;
+  bottom: 103px;
+  left: calc(50% - 35px);
+}
+
+
+

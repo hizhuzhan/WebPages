@@ -1,8 +1,14 @@
-var swiperLength = 3;
-var pageType = 'jin';
+// var swiperLength = 3;
+// var pageType = 'jin';
+
+var swiperLength = parseInt(getUrlParam('length'));
+var pageType = getUrlParam('type');
+var init = parseInt(getUrlParam('init'));
 
 $(function(){
-    $('._infoPage').hide();
+    // $('._infoPage').hide();
+    loadingSwiper();
+
 });
 
 /**
@@ -10,30 +16,50 @@ $(function(){
  * @param {*} thisIndex 
  */
 var swiperChange = function(thisIndex){
-    if(thisIndex <= swiperLength){
-        $('._infoTitle>img').attr('src', '../skipImg/' + pageType + '/' + pageType + '_' + thisIndex + '_title.png');
-        $('._infoPage>img').attr('src', '../skipImg/' + pageType + '/' + pageType + '_' + thisIndex + '_1.jpg');
-    }else{
-        $('._infoTitle>img').attr('src', '../skipImg/' + pageType + '/' + pageType + '_1_title.png');
-        $('._infoPage>img').attr('src', '../skipImg/' + pageType + '/' + pageType + '_1_1.jpg');
+    if(thisIndex == 0){
+        $('._infoTitle>img').attr('src', 'skipImg/' + pageType + '/' + pageType + '_' + swiperLength + '_title.png');
+        $('._infoPage>img').attr('src', 'skipImg/' + pageType + '/' + pageType + '_' + swiperLength + '_1.jpg');
+    }
+    if(thisIndex <= swiperLength && thisIndex > 0){
+        $('._infoTitle>img').attr('src', 'skipImg/' + pageType + '/' + pageType + '_' + thisIndex + '_title.png');
+        $('._infoPage>img').attr('src', 'skipImg/' + pageType + '/' + pageType + '_' + thisIndex + '_1.jpg');
+    }
+    if(thisIndex == (swiperLength + 1)){
+        $('._infoTitle>img').attr('src', 'skipImg/' + pageType + '/' + pageType + '_1_title.png');
+        $('._infoPage>img').attr('src', 'skipImg/' + pageType + '/' + pageType + '_1_1.jpg');
     }
 };
 
 /**
  * swiper loading
  */
-var swiper = new Swiper('.swiper-container', {
-    initialSlide :0,
-    loop : true,
-    pagination: {
-        el: '.swiper-pagination',
-    },
-    on: {
-        slideChangeTransitionStart: function(){
-            swiperChange(this.activeIndex);
+var loadingSwiper = function(){
+    creatSwiper();
+    var swiper = new Swiper('.swiper-container', {
+        initialSlide :(init - 1),
+        loop : true,
+        pagination: {
+            el: '.swiper-pagination',
         },
-    },
-});
+        on: {
+            slideChangeTransitionStart: function(){
+                swiperChange(this.activeIndex);
+            },
+        },
+    });
+}
+
+var creatSwiper = function(){
+    $('.swiper-wrapper').empty();
+    for(var i = 1; i <= swiperLength; i++){
+        $('.swiper-wrapper').append(swiperHtml(i));
+    }
+}
+
+var swiperHtml = function(num){
+    return '<div class="swiper-slide"><img src="skipImg/' + pageType + '/' + pageType + '_' + num + '.jpg"></div>';
+}
+
 
 //back
 $('._back').on('click', function(){
@@ -57,4 +83,12 @@ $('._infoPage>div').on('click', function(){
 
 
 
-
+/**
+ * getUrlParam
+ * @param {urlName} name 
+ */
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg); 
+    if (r != null) return unescape(r[2]); return null; 
+}

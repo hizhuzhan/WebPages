@@ -1,0 +1,36 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+body>._main_div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body>._main_div>img{
+  width: 100%;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide>img{
+    width: 100%;
+}
+body>._footerBtn{
+  position: absolute;
+  width: 344px;
+  bottom: 0;
+  left: calc(50% - 172px);
+}
+body>._footerBtn>img{
+  width: 100%;
+}

@@ -1,12 +1,8 @@
-// var swiperLength = 3;
-// var pageType = 'jin';
-
 var swiperLength = parseInt(getUrlParam('length'));
 var pageType = getUrlParam('type');
 var init = parseInt(getUrlParam('init'));
 
 $(function(){
-    // $('._infoPage').hide();
     loadingSwiper();
 
 });

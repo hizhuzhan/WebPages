@@ -1,4 +1,5 @@
-var pageType = getUrlParam('type');
+// var pageType = getUrlParam('type');
+var pageType = 'jin';
 
 /**
  * info title change
@@ -9,21 +10,18 @@ var swiperChange = function(thisIndex){
     var map = 'skipImg/public/mapBtn.png';
     var str = 'skipImg/public/strBtn.png';
     switch(thisIndex){
-        case 0: $('._footerBtn>img').attr('src', str);
+        case 0: $('._footerBtn>img').attr('src', info);
         break;
         case 1: $('._footerBtn>img').attr('src', map);
         break;
-        case 2: $('._footerBtn>img').attr('src', map);
-        break;
-        case 3: $('._footerBtn>img').attr('src', str);
-        break;
-        case 4: $('._footerBtn>img').attr('src', info);
+        case 2: $('._footerBtn>img').attr('src', str);
         break;
     }
 };
 
 var swiper = new Swiper('.swiper-container', {
-    initialSlide :0,
+    effect : 'fade',
+    initialSlide :1,
     on: {
         slideChangeTransitionStart: function(){
             console.log(this.activeIndex);

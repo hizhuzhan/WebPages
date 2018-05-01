@@ -1,22 +1,16 @@
-html, body {
-  position: relative;
-  height: 100%;
-}
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color:#000;
-  margin: 0;
-  padding: 0;
-}
-body>._main_div{
+/* body ._map_div{
   position: absolute;
   width: 100%;
   height: 100%;
 }
-body>._main_div>img{
+body ._map_div>img{
   width: 100%;
+}
+body ._map_back{
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100px;
 }
 .swiper-container {
   width: 100%;
@@ -25,12 +19,43 @@ body>._main_div>img{
 .swiper-slide>img{
     width: 100%;
 }
-body>._footerBtn{
+body ._map_footerBtn{
   position: absolute;
   width: 344px;
-  bottom: 0;
+  bottom: 10px;
   left: calc(50% - 172px);
 }
-body>._footerBtn>img{
+body ._map_footerBtn>img{
+  width: 100%;
+} */
+
+_page_map ._map_div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+_page_map ._map_div>img{
+  width: 100%;
+}
+_page_map ._map_back{
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100px;
+}
+_page_map .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+_page_map .swiper-slide>img{
+    width: 100%;
+}
+_page_map ._map_footerBtn{
+  position: absolute;
+  width: 344px;
+  bottom: 10px;
+  left: calc(50% - 172px);
+}
+_page_map ._map_footerBtn>img{
   width: 100%;
 }

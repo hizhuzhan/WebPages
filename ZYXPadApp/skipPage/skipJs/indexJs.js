@@ -131,7 +131,7 @@ var creatMapSwiper = function(mapPageType){
     $('.' + mapPageType + '-swiper-container>.swiper-wrapper').append(info);
     $('.' + mapPageType + '-swiper-container>.swiper-wrapper').append(map);
     $('.' + mapPageType + '-swiper-container>.swiper-wrapper').append(str);
-}
+};
 
 /**
  * create Popup html
@@ -148,11 +148,15 @@ var createPopup = function(type, popupNum){
 };
 
 $('._page_map').find('.open-popup').on('click', function(){
+
     var popupOpenType = $(this).data('type');
     var popupOpenLength = parseInt($(this).data('length'));
     var popupOpenInit = parseInt($(this).data('init'));
 
-    loadingPopupSwiper(popupOpenType, popupOpenLength, popupOpenInit);
+    setTimeout(function(){
+        loadingPopupSwiper(popupOpenType, popupOpenLength, popupOpenInit);
+    }, 10);
+
 });
 
 // $(document).on('click', '.jin_1', function(){
@@ -173,15 +177,19 @@ var popupHtml = function(type){
                 '<img src="skipImg/jin/jin_1_title.png">'+
                 '</div>'+
                 '<!-- back index button -->'+
-                '<div class="_backIndex">'+
+                '<a href="#pageIndex" class="_backIndex close-popup">'+
                 '<img src="skipImg/public/backIndex.png">'+
-                '</div>'+
+                '</a>'+
                 '<!-- info button -->'+
-                '<div class="_info">'+
+                '<div class="_' +
+                type +
+                '_info _info">'+
                 '<img src="skipImg/public/info.png">'+
                 '</div>'+
                 '<!-- info page -->'+
-                '<div class="_infoPage">'+
+                '<div class="_' +
+                type +
+                '_infoPage _infoPage">'+
                 '<img src="skipImg/jin/jin_1_1.jpg">'+
                 '<div class="_closeInfo"></div>'+
                 '</div>'+
@@ -195,7 +203,20 @@ var popupHtml = function(type){
                 '<div class="swiper-pagination"></div>'+
                 '</div>' +
                 '</div>' +
-                '</div>';
+                '</div>' +
+                '<script>' +
+                '$(\'._' +
+                type +
+                '_info\').on(\'click\', function(){\n' +
+                '    $(\'._infoPage\').fadeIn(200);\n' +
+                '});\n' +
+                '//close info\n' +
+                '$(\'._' +
+                type +
+                '_infoPage>div\').on(\'click\', function(){\n' +
+                '    $(\'._infoPage\').fadeOut(200);\n' +
+                '});' +
+                '</script>';
     return html;
 };
 
@@ -247,12 +268,4 @@ var swiperHtml = function(popupPageType, popupNum){
     return '<div class="swiper-slide"><img src="skipImg/' + popupPageType + '/' + popupPageType + '_' + popupNum + '.jpg"></div>';
 };
 
-//info
-$('._info').on('click', function(){
-    $('._infoPage').fadeIn(200);
-});
 
-//close info
-$('._infoPage>div').on('click', function(){
-    $('._infoPage').fadeOut(200);
-});

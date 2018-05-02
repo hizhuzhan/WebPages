@@ -4,7 +4,7 @@ $(function(){
     setTimeout(function(){
         $('._loading_page').fadeOut();
     }, 2000);
-    $('#pageIndex').show();
+    // $('#pageIndex').show();
     changeBtnImg('_jin', 'jin');
     changeBtnImg('_yuan', 'yuan');
     changeBtnImg('_ming', 'ming');

@@ -36,31 +36,31 @@ $(document).on("pageInit", "#pageMap_jin", function(e, pageId, page) {
     createPopup(type, 3);
 });
 $(document).on("pageInit", "#pageMap_yuan", function(e, pageId, page) {  
-    var type = pageId.split('_')[1]
+    var type = pageId.split('_')[1];
     jinMapSwiper(type);
     //create building popup
 
 });
 $(document).on("pageInit", "#pageMap_ming", function(e, pageId, page) {  
-    var type = pageId.split('_')[1]
+    var type = pageId.split('_')[1];
     jinMapSwiper(type);
     //create building popup
     
 });
 $(document).on("pageInit", "#pageMap_min", function(e, pageId, page) {  
-    var type = pageId.split('_')[1]
+    var type = pageId.split('_')[1];
     jinMapSwiper(type);
     //create building popup
 
 });
 $(document).on("pageInit", "#pageMap_xin", function(e, pageId, page) {  
-    var type = pageId.split('_')[1]
+    var type = pageId.split('_')[1];
     jinMapSwiper(type);
     //create building popup
 
 });
 $(document).on("pageInit", "#pageMap_xian", function(e, pageId, page) {  
-    var type = pageId.split('_')[1]
+    var type = pageId.split('_')[1];
     jinMapSwiper(type);
     //create building popup
 

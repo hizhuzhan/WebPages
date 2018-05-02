@@ -3,7 +3,8 @@ var mapType = '';
 $(function(){
     setTimeout(function(){
         $('._loading_page').fadeOut();
-    }, 0);
+    }, 2000);
+    $('#pageIndex').show();
     changeBtnImg('_jin', 'jin');
     changeBtnImg('_yuan', 'yuan');
     changeBtnImg('_ming', 'ming');
@@ -37,33 +38,34 @@ $(document).on("pageInit", "#pageMap_jin", function(e, pageId, page) {
 });
 $(document).on("pageInit", "#pageMap_yuan", function(e, pageId, page) {  
     var type = pageId.split('_')[1];
-    jinMapSwiper(type);
+    yuanMapSwiper(type);
     //create building popup
+    createPopup(type, 5);
 
 });
 $(document).on("pageInit", "#pageMap_ming", function(e, pageId, page) {  
     var type = pageId.split('_')[1];
-    jinMapSwiper(type);
+    mingMapSwiper(type);
     //create building popup
-    
+    createPopup(type, 11);
 });
 $(document).on("pageInit", "#pageMap_min", function(e, pageId, page) {  
     var type = pageId.split('_')[1];
-    jinMapSwiper(type);
+    minMapSwiper(type);
     //create building popup
-
+    createPopup(type, 5);
 });
 $(document).on("pageInit", "#pageMap_xin", function(e, pageId, page) {  
     var type = pageId.split('_')[1];
-    jinMapSwiper(type);
+    xinMapSwiper(type);
     //create building popup
-
+    createPopup(type, 6);
 });
 $(document).on("pageInit", "#pageMap_xian", function(e, pageId, page) {  
     var type = pageId.split('_')[1];
-    jinMapSwiper(type);
+    xianMapSwiper(type);
     //create building popup
-
+    createPopup(type, 8);
 });
 
 /**
@@ -113,6 +115,11 @@ var creatSwiperPublic = function(mapPageType){
         on: {
             slideChangeTransitionStart: function(){
                 swiperChange(mapPageType, this.activeIndex);
+                if(this.activeIndex == 1){
+                    $('._' + mapPageType + '_building').show();
+                }else{
+                    $('._' + mapPageType + '_building').hide();
+                }
             },
         },
     });
@@ -137,10 +144,9 @@ var creatMapSwiper = function(mapPageType){
  * create Popup html
  */
 var createPopup = function(type, popupNum){
-    var thisDom = $('._' + type + '_popup');
-    if(thisDom.html() == ''){
+    if($('body').find('.' + type +'Popup').html() == undefined){
         for(var i = 1; i <= popupNum; i++){
-            thisDom.append(popupHtml(type + '_' + i));
+            $('body').append(popupHtml(type + '_' + i));
             creatSwiper(type, type + '_' + i, popupNum);
         }
     }
@@ -164,7 +170,11 @@ $('._page_map').find('.open-popup').on('click', function(){
 // });
 
 var popupHtml = function(type){
-    var html = '<div class="popup ' + 
+    var realType = type.split('_')[0];
+    var realNum = type.split('_')[1];
+    var html = '<div class="popup _auto_createPopup ' +
+                realType +
+                'Popup ' +
                 type + 
                 '">' +
                 '<div class="content-block">' + 
@@ -174,7 +184,11 @@ var popupHtml = function(type){
                 '</a>'+
                 '<!-- info title -->'+
                 '<div class="_infoTitle">'+
-                '<img src="skipImg/jin/jin_1_title.png">'+
+                '<img src="skipImg/' +
+                realType +
+                '/' +
+                type +
+                '_title.png">'+
                 '</div>'+
                 '<!-- back index button -->'+
                 '<a href="#pageIndex" class="_backIndex close-popup">'+
@@ -190,7 +204,13 @@ var popupHtml = function(type){
                 '<div class="_' +
                 type +
                 '_infoPage _infoPage">'+
-                '<img src="skipImg/jin/jin_1_1.jpg">'+
+                '<img src="skipImg/' +
+                realType +
+                '/' +
+                realType +
+                '_' +
+                realNum +
+                '_1.jpg">'+
                 '<div class="_closeInfo"></div>'+
                 '</div>'+
                 '<!-- Swiper -->'+

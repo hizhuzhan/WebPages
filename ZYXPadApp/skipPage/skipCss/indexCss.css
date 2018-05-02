@@ -1,3 +1,13 @@
+.hide{
+  display: none;
+}
+._close_red{
+  position: absolute;
+  bottom: 0;
+  left: 11.7rem;
+  padding: 62px 80px;
+  /*background-color: red;*/
+}
 .content>._loading_page{
   z-index: 10;
   position: absolute;
@@ -86,40 +96,11 @@
 }
 ._page_map>._building_a{
   position: absolute;
-   background-color: red;
+   /*background-color: red;*/
   z-index: 3;
 }
-/* jin building start */
-._page_map>._jin_1{
-  z-index: 3;
-  top: 5.5rem;
-  left: 12.2rem;
-  padding: 73px 0px;
-
-}
-._page_map>._jin_2{
-  top: 29.5rem;
-  padding: 23px 100px;
-  left: 3rem;
-}
-._page_map>._jin_3{
-  top: 20rem;
-  left: 21.5rem;
-  padding: 50px;
-}
-/* jin building end */
 
 /* create popup */
-._auto_createPopup {
-  position: relative;
-  height: 100%;
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color:#000;
-  margin: 0;
-  padding: 0;
-}
 ._auto_createPopup .content-block{
   padding: 0;
   margin: 0;
@@ -199,5 +180,217 @@
   left: calc(50% - 35px);
 }
 
+/* jin building start */
+._page_map>._jin_1{
+  top: 5.5rem;
+  left: 12.2rem;
+  padding: 87px 44px;
 
+}
+._page_map>._jin_2{
+  top: 29.5rem;
+  left: 3rem;
+  padding: 43px 118px;
+}
+._page_map>._jin_3{
+  top: 20rem;
+  left: 21.5rem;
+  padding: 70px 81px;
+}
+/* jin building end */
 
+/* yuan building start */
+._page_map>._yuan_1{
+  top: 7.5rem;
+  left: 5rem;
+  padding: 62px 100px;
+}
+._page_map>._yuan_2{
+  top: 19rem;
+  left: 4rem;
+  padding: 84px 48px;
+}
+._page_map>._yuan_3{
+  top: 20.2rem;
+  left: 11rem;
+  padding: 55px 83px;
+}
+._page_map>._yuan_4{
+  top: 17.9rem;
+  left: 21.2rem;
+  padding: 52px 90px;
+}
+._page_map>._yuan_5{
+  top: 26rem;
+  left: 4.4rem;
+  padding: 88px 34px;
+}
+
+/* yuan building end */
+
+/* ming building start */
+._page_map>._ming_1{
+  top: 7.5rem;
+  left: 3rem;
+  padding: 59px 100px;
+}
+._page_map>._ming_2{
+  top: 7.5rem;
+  left: 5rem;
+  padding: 62px 100px;
+}
+._page_map>._ming_3{
+  top: 14.5rem;
+  left: 2rem;
+  padding: 85px 62px;
+}
+._page_map>._ming_4{
+  top: 14.5rem;
+  left: 10rem;
+  padding: 46px 56px;
+}
+._page_map>._ming_5{
+  top: 14.5rem;
+  left: 18.5rem;
+  padding: 45px 45px;
+}
+._page_map>._ming_6{
+  top: 21.5rem;
+  left: 11rem;
+  padding: 49px 48px;
+}
+._page_map>._ming_7{
+  top: 18.5rem;
+  left: 13rem;
+  padding: 35px 90px;
+}
+._page_map>._ming_8{
+  top: 19.5rem;
+  left: 25rem;
+  padding: 34px 55px;
+}
+._page_map>._ming_9{
+  top: 22.5rem;
+  left: 17rem;
+  padding: 37px 61px;
+}
+._page_map>._ming_10{
+  top: 26.5rem;
+  left: 2rem;
+  padding: 66px 39px;
+}
+._page_map>._ming_11{
+  top: 27.5rem;
+  left: 19rem;
+  padding: 61px 55px;
+}
+/* ming building end */
+
+/* min building start */
+._page_map>._min_1{
+  top: 8.5rem;
+  left: 16.5rem;
+  padding: 47px 71px;
+}
+._page_map>._min_2{
+  top: 9rem;
+  left: 6rem;
+  padding: 36px 109px;
+}
+._page_map>._min_3{
+  top: 12.5rem;
+  left: 6.5rem;
+  padding: 55px 71px;
+}
+._page_map>._min_4{
+  top: 12.5rem;
+  left: 18rem;
+  padding: 52px 71px;
+}
+._page_map>._min_5{
+  top: 18.5rem;
+  left: 17rem;
+  padding: 47px 71px;
+}
+/* min building end */
+
+/* xin building start */
+._page_map>._xin_1{
+  top: 10.5rem;
+  left: 7rem;
+  padding: 61px 77px;
+}
+/* xin building start */
+._page_map>._xin_2{
+  top: 15.5rem;
+  left: 12.5rem;
+  padding: 63px 100px;
+}
+/* xin building start */
+._page_map>._xin_3{
+  top: 15.5rem;
+  left: 0rem;
+  padding: 47px 74px;
+}
+/* xin building start */
+._page_map>._xin_4{
+  top: 21.5rem;
+  left: 6rem;
+  padding: 31px 100px;
+}
+/* xin building start */
+._page_map>._xin_5{
+  top: 22rem;
+  left: 16rem;
+  padding: 29px 100px;
+}
+/* xin building start */
+._page_map>._xin_6{
+  top: 26.5rem;
+  left: 18rem;
+  padding: 40px 108px;
+}
+/* xin building end */
+
+/* xian building start */
+._page_map>._xian_1{
+  top: 9.5rem;
+  left: 4rem;
+  padding: 34px 88px;
+}
+._page_map>._xian_2{
+  top: 10rem;
+  left: 13rem;
+  padding: 31px 71px;
+}
+._page_map>._xian_3{
+  top: 7.5rem;
+  left: 23rem;
+  padding: 46px 51px;
+}
+._page_map>._xian_4{
+  top: 12.5rem;
+  left: 0rem;
+  padding: 42px 80px;
+}
+._page_map>._xian_5{
+  top: 19.5rem;
+  left: 7rem;
+  padding: 30px 73px;
+}
+._page_map>._xian_6{
+  top: 13.5rem;
+  left: 22rem;
+  padding: 41px 73px;
+}
+._page_map>._xian_7{
+  top: 17.5rem;
+  left: 23rem;
+  padding: 61px 59px;
+}
+._page_map>._xian_8{
+  top: 30.5rem;
+  left: 3rem;
+  padding: 41px 109px;
+}
+/* xian building end */

@@ -1,7 +1,7 @@
 var mapType = '';
 
-$(function(){
-    setTimeout(function(){
+$(function () {
+    setTimeout(function () {
         $('._loading_page').fadeOut();
     }, 2000);
     // $('#pageIndex').show();
@@ -13,55 +13,63 @@ $(function(){
     changeBtnImg('_xian', 'xian');
 });
 
+$('._openIn').on('click', function () {
+    $('#_in')[0].play();
+});
+
+$('._closeOut').on('click', function () {
+    $('#_out')[0].play();
+});
+
 /**
  * btn touch change type
- * @param {btnDom} btnDom 
- * @param {type} type 
+ * @param {btnDom} btnDom
+ * @param {type} type
  */
-var changeBtnImg = function(btnDom, type){
+var changeBtnImg = function (btnDom, type) {
     $('.' + btnDom).show();
-    $('.' + btnDom).on("touchstart",function () {
+    $('.' + btnDom).on("touchstart", function () {
         $(this).find('img').attr('src', 'skipImg/index/' + type + '_down.png');
     });
-    $('.' + btnDom).on("touchend",function () {
+    $('.' + btnDom).on("touchend", function () {
         $(this).find('img').attr('src', 'skipImg/index/' + type + '.png');
     });
 };
 
 // map page
 // map page loading
-$(document).on("pageInit", "#pageMap_jin", function(e, pageId, page) {  
+$(document).on("pageInit", "#pageMap_jin", function (e, pageId, page) {
     var type = pageId.split('_')[1];
     jinMapSwiper(type);
     //create building popup
     createPopup(type, 3);
 });
-$(document).on("pageInit", "#pageMap_yuan", function(e, pageId, page) {  
+$(document).on("pageInit", "#pageMap_yuan", function (e, pageId, page) {
     var type = pageId.split('_')[1];
     yuanMapSwiper(type);
     //create building popup
     createPopup(type, 5);
 
 });
-$(document).on("pageInit", "#pageMap_ming", function(e, pageId, page) {  
+$(document).on("pageInit", "#pageMap_ming", function (e, pageId, page) {
     var type = pageId.split('_')[1];
     mingMapSwiper(type);
     //create building popup
     createPopup(type, 11);
 });
-$(document).on("pageInit", "#pageMap_min", function(e, pageId, page) {  
+$(document).on("pageInit", "#pageMap_min", function (e, pageId, page) {
     var type = pageId.split('_')[1];
     minMapSwiper(type);
     //create building popup
     createPopup(type, 5);
 });
-$(document).on("pageInit", "#pageMap_xin", function(e, pageId, page) {  
+$(document).on("pageInit", "#pageMap_xin", function (e, pageId, page) {
     var type = pageId.split('_')[1];
     xinMapSwiper(type);
     //create building popup
     createPopup(type, 6);
 });
-$(document).on("pageInit", "#pageMap_xian", function(e, pageId, page) {  
+$(document).on("pageInit", "#pageMap_xian", function (e, pageId, page) {
     var type = pageId.split('_')[1];
     xianMapSwiper(type);
     //create building popup
@@ -70,54 +78,57 @@ $(document).on("pageInit", "#pageMap_xian", function(e, pageId, page) {
 
 /**
  * info title change
- * @param {*} thisIndex 
+ * @param {*} thisIndex
  */
-var swiperChange = function(thisIndex, type){
+var swiperChange = function (thisIndex, type) {
     var info = 'skipImg/public/infoBtn.png';
     var map = 'skipImg/public/mapBtn.png';
     var str = 'skipImg/public/strBtn.png';
-    switch(type){
-        case 0: $('.' + thisIndex + '_map_footerBtn>img').attr('src', info);
-        break;
-        case 1: $('.' + thisIndex + '_map_footerBtn>img').attr('src', map);
-        break;
-        case 2: $('.' + thisIndex + '_map_footerBtn>img').attr('src', str);
-        break;
+    switch (type) {
+        case 0:
+            $('.' + thisIndex + '_map_footerBtn>img').attr('src', info);
+            break;
+        case 1:
+            $('.' + thisIndex + '_map_footerBtn>img').attr('src', map);
+            break;
+        case 2:
+            $('.' + thisIndex + '_map_footerBtn>img').attr('src', str);
+            break;
     }
 };
 
 // loading map swiper
-var jinMapSwiper = function(mapPageType){
+var jinMapSwiper = function (mapPageType) {
     creatSwiperPublic(mapPageType);
 };
-var yuanMapSwiper = function(mapPageType){
+var yuanMapSwiper = function (mapPageType) {
     creatSwiperPublic(mapPageType);
 };
-var mingMapSwiper = function(mapPageType){
+var mingMapSwiper = function (mapPageType) {
     creatSwiperPublic(mapPageType);
 };
-var minMapSwiper = function(mapPageType){
+var minMapSwiper = function (mapPageType) {
     creatSwiperPublic(mapPageType);
 };
-var xinMapSwiper = function(mapPageType){
+var xinMapSwiper = function (mapPageType) {
     creatSwiperPublic(mapPageType);
 };
-var xianMapSwiper = function(mapPageType){
+var xianMapSwiper = function (mapPageType) {
     creatSwiperPublic(mapPageType);
 };
 
 
-var creatSwiperPublic = function(mapPageType){
+var creatSwiperPublic = function (mapPageType) {
     creatMapSwiper(mapPageType);
     new Swiper('.' + mapPageType + '-swiper-container', {
-        effect : 'fade',
-        initialSlide : 1,
+        effect: 'fade',
+        initialSlide: 1,
         on: {
-            slideChangeTransitionStart: function(){
+            slideChangeTransitionStart: function () {
                 swiperChange(mapPageType, this.activeIndex);
-                if(this.activeIndex == 1){
+                if (this.activeIndex == 1) {
                     $('._' + mapPageType + '_building').show();
-                }else{
+                } else {
                     $('._' + mapPageType + '_building').hide();
                 }
             },
@@ -126,9 +137,9 @@ var creatSwiperPublic = function(mapPageType){
 };
 /**
  * create map swiper Html
- * @param {*} mapPageType 
+ * @param {*} mapPageType
  */
-var creatMapSwiper = function(mapPageType){
+var creatMapSwiper = function (mapPageType) {
     var info = '<div class="swiper-slide"><img src="skipImg/' + mapPageType + '/' + mapPageType + '_info.png"></div>';
     var map = '<div class="swiper-slide"><img src="skipImg/' + mapPageType + '/' + mapPageType + '_map.png"></div>';
     var str = '<div class="swiper-slide"><img src="skipImg/' + mapPageType + '/' + mapPageType + '_str.png"></div>';
@@ -143,9 +154,9 @@ var creatMapSwiper = function(mapPageType){
 /**
  * create Popup html
  */
-var createPopup = function(type, popupNum){
-    if($('body').find('.' + type +'Popup').html() == undefined){
-        for(var i = 1; i <= popupNum; i++){
+var createPopup = function (type, popupNum) {
+    if ($('body').find('.' + type + 'Popup').html() == undefined) {
+        for (var i = 1; i <= popupNum; i++) {
             $('body').append(popupHtml(type + '_' + i));
             creatSwiper(type, type + '_' + i, popupNum);
         }
@@ -153,13 +164,13 @@ var createPopup = function(type, popupNum){
     // loadingPopupSwiper(type, popupNum);
 };
 
-$('._page_map').find('.open-popup').on('click', function(){
+$('._page_map').find('.open-popup').on('click', function () {
 
     var popupOpenType = $(this).data('type');
     var popupOpenLength = parseInt($(this).data('length'));
     var popupOpenInit = parseInt($(this).data('init'));
 
-    setTimeout(function(){
+    setTimeout(function () {
         loadingPopupSwiper(popupOpenType, popupOpenLength, popupOpenInit);
     }, 10);
 
@@ -169,88 +180,102 @@ $('._page_map').find('.open-popup').on('click', function(){
 //     loadingPopupSwiper('jin_1', 3, 1);
 // });
 
-var popupHtml = function(type){
+var popupHtml = function (type) {
     var realType = type.split('_')[0];
     var realNum = type.split('_')[1];
     var html = '<div class="popup _auto_createPopup ' +
-                realType +
-                'Popup ' +
-                type + 
-                '">' +
-                '<div class="content-block">' + 
-                '<!-- back button -->'+
-                '<a href="#" class="_back close-popup">'+
-                '<img src="skipImg/public/back.png">'+
-                '</a>'+
-                '<!-- info title -->'+
-                '<div class="_infoTitle">'+
-                '<img src="skipImg/' +
-                realType +
-                '/' +
-                type +
-                '_title.png">'+
-                '</div>'+
-                '<!-- back index button -->'+
-                '<a href="#pageIndex" class="_backIndex close-popup">'+
-                '<img src="skipImg/public/backIndex.png">'+
-                '</a>'+
-                '<!-- info button -->'+
-                '<div class="_' +
-                type +
-                '_info _info">'+
-                '<img src="skipImg/public/info.png">'+
-                '</div>'+
-                '<!-- info page -->'+
-                '<div class="_' +
-                type +
-                '_infoPage _infoPage">'+
-                '<img src="skipImg/' +
-                realType +
-                '/' +
-                realType +
-                '_' +
-                realNum +
-                '_1.jpg">'+
-                '<div class="_closeInfo"></div>'+
-                '</div>'+
-                '<!-- Swiper -->'+
-                '<div class="' +
-                type + 
-                '-swiper-container _swiper-container">'+
-                '<div class="swiper-wrapper">'+
-                '</div>'+
-                '<!-- Add Pagination -->'+
-                '<div class="swiper-pagination"></div>'+
-                '</div>' +
-                '</div>' +
-                '</div>' +
-                '<script>' +
-                '$(\'._' +
-                type +
-                '_info\').on(\'click\', function(){\n' +
-                '    $(\'._infoPage\').fadeIn(200);\n' +
-                '});\n' +
-                '//close info\n' +
-                '$(\'._' +
-                type +
-                '_infoPage>div\').on(\'click\', function(){\n' +
-                '    $(\'._infoPage\').fadeOut(200);\n' +
-                '});' +
-                '</script>';
+        realType +
+        'Popup ' +
+        type +
+        '">' +
+        '<div class="content-block">' +
+        '<audio id="_popupIn">\n' +
+        '<source src="skipCss/in.mp3" type="audio/mpeg">\n' +
+        '</audio>\n' +
+        '<audio id="_popupOut">\n' +
+        '<source src="skipCss/out.mp3" type="audio/mpeg">\n' +
+        '</audio>' +
+        '<!-- back button -->' +
+        '<a href="#" class="_back close-popup _closeOut">' +
+        '<img src="skipImg/public/back.png">' +
+        '</a>' +
+        '<!-- info title -->' +
+        '<div class="_infoTitle">' +
+        '<img src="skipImg/' +
+        realType +
+        '/' +
+        type +
+        '_title.png">' +
+        '</div>' +
+        '<!-- back index button -->' +
+        '<a href="#pageIndex" class="_backIndex close-popup _closeOut">' +
+        '<img src="skipImg/public/backIndex.png">' +
+        '</a>' +
+        '<!-- info button -->' +
+        '<div class="_' +
+        type +
+        '_info _info _openIn">' +
+        '<img src="skipImg/public/info.png">' +
+        '</div>' +
+        '<!-- info page -->' +
+        '<div class="_' +
+        type +
+        '_infoPage _infoPage">' +
+        '<img src="skipImg/' +
+        realType +
+        '/' +
+        realType +
+        '_' +
+        realNum +
+        '_1.jpg">' +
+        '<div class="_closeInfo"></div>' +
+        '</div>' +
+        '<!-- Swiper -->' +
+        '<div class="' +
+        type +
+        '-swiper-container _swiper-container">' +
+        '<div class="swiper-wrapper">' +
+        '</div>' +
+        '<!-- Add Pagination -->' +
+        '<div class="swiper-pagination"></div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '<script>' +
+        '$(\'._' +
+        type +
+        '_info\').on(\'click\', function(){\n' +
+        '    $(\'._infoPage\').fadeIn(200);\n' +
+        '$(\'#_in\')[0].play();' +
+        '});\n' +
+        '//close info\n' +
+        '$(\'._' +
+        type +
+        '_infoPage>div\').on(\'click\', function(){\n' +
+        '    $(\'._infoPage\').fadeOut(200);\n' +
+        '$(\'#_out\')[0].play();' +
+        '});' +
+        '$(\'._back\').on(\'click\', function(){\n' +
+        '$(\'#_popupOut\')[0].play();' +
+        '});\n' +
+        '$(\'._backIndex\').on(\'click\', function(){\n' +
+        '$(\'#_popupOut\')[0].play();' +
+        '});\n' +
+        '</script>';
     return html;
 };
 
-var loadingPopupSwiper = function(popupPageType, popupNum, init){
+var loadingPopupSwiper = function (popupPageType, popupNum, init) {
     // creatSwiper(popupPageType, popupNum);
     console.log(popupPageType + '   ' + popupNum + '   ' + init);
     new Swiper('.' + popupPageType + '-swiper-container', {
-        initialSlide :(init - 1),
-        loop : true,
+        initialSlide: (init - 1),
+        loop: true,
         pagination: {
             el: '.swiper-pagination',
         },
         on: {
-            slideChangeTransitionStart: function(){
+            slideChangeTransitionStart: function () {
                 swiperPopupChange(popupPageType, this.activeIndex, popupNum);
             },
         },
@@ -259,32 +284,32 @@ var loadingPopupSwiper = function(popupPageType, popupNum, init){
 
 /**
  * info title change
- * @param {*} thisIndex 
+ * @param {*} thisIndex
  */
-var swiperPopupChange = function(popupPageType, thisIndex, popupNum){
+var swiperPopupChange = function (popupPageType, thisIndex, popupNum) {
     popupPageType = popupPageType.split('_')[0];
-    if(thisIndex == 0){
+    if (thisIndex == 0) {
         $('._infoTitle>img').attr('src', 'skipImg/' + popupPageType + '/' + popupPageType + '_' + popupNum + '_title.png');
         $('._infoPage>img').attr('src', 'skipImg/' + popupPageType + '/' + popupPageType + '_' + popupNum + '_1.jpg');
     }
-    if(thisIndex <= popupNum && thisIndex > 0){
+    if (thisIndex <= popupNum && thisIndex > 0) {
         $('._infoTitle>img').attr('src', 'skipImg/' + popupPageType + '/' + popupPageType + '_' + thisIndex + '_title.png');
         $('._infoPage>img').attr('src', 'skipImg/' + popupPageType + '/' + popupPageType + '_' + thisIndex + '_1.jpg');
     }
-    if(thisIndex == (popupNum + 1)){
+    if (thisIndex == (popupNum + 1)) {
         $('._infoTitle>img').attr('src', 'skipImg/' + popupPageType + '/' + popupPageType + '_1_title.png');
         $('._infoPage>img').attr('src', 'skipImg/' + popupPageType + '/' + popupPageType + '_1_1.jpg');
     }
 };
 
-var creatSwiper = function(popupPageType, type, popupNum){
+var creatSwiper = function (popupPageType, type, popupNum) {
     $('.' + type + '-swiper-container>.swiper-wrapper').empty();
-    for(var i = 1; i <= popupNum; i++){
+    for (var i = 1; i <= popupNum; i++) {
         $('.' + type + '-swiper-container>.swiper-wrapper').append(swiperHtml(popupPageType, i));
     }
 };
 
-var swiperHtml = function(popupPageType, popupNum){
+var swiperHtml = function (popupPageType, popupNum) {
     return '<div class="swiper-slide"><img src="skipImg/' + popupPageType + '/' + popupPageType + '_' + popupNum + '.jpg"></div>';
 };
 

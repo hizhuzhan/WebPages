@@ -18,28 +18,34 @@
 <div class="page page-current" id="pageIndex">
     <div class="content">
         <!--<embed id="myEmbed" src="skipCss/in.mp3" hidden="true"/>-->
+        <audio id="_in">
+            <source src="skipCss/in.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="_out">
+            <source src="skipCss/out.mp3" type="audio/mpeg">
+        </audio>
         <div class="_loading_page">
             <img src="skipImg/index/index_loading.jpg">
         </div>
         <div class="_content">
             <img src="skipImg/index/index_bg.jpg">
         </div>
-        <a class="_jin _indexBtn" href="#pageMap_jin" style="width: 30%;">
+        <a class="_jin _indexBtn _openIn" href="#pageMap_jin" style="width: 30%;">
             <img src="skipImg/index/jin.png">
         </a>
-        <a class="_yuan _indexBtn" href="#pageMap_yuan" style="width: 27%; top: 11.5rem; right: 4.5rem;">
+        <a class="_yuan _indexBtn _openIn" href="#pageMap_yuan" style="width: 27%; top: 11.5rem; right: 4.5rem;">
             <img src="skipImg/index/yuan.png">
         </a>
-        <a class="_ming _indexBtn" href="#pageMap_ming" style="width: 29%;">
+        <a class="_ming _indexBtn _openIn" href="#pageMap_ming" style="width: 29%;">
             <img src="skipImg/index/ming.png">
         </a>
-        <a class="_min _indexBtn" href="#pageMap_min" style="width: 27%; top: 20rem;">
+        <a class="_min _indexBtn _openIn" href="#pageMap_min" style="width: 27%; top: 20rem;">
             <img src="skipImg/index/min.png">
         </a>
-        <a class="_xin _indexBtn" href="#pageMap_xin" style="width: 28%;">
+        <a class="_xin _indexBtn _openIn" href="#pageMap_xin" style="width: 28%;">
             <img src="skipImg/index/xin.png">
         </a>
-        <a class="_xian _indexBtn" href="#pageMap_xian" style="width: 25%; top: 27rem; right: 5.3rem;">
+        <a class="_xian _indexBtn _openIn" href="#pageMap_xian" style="width: 25%; top: 27rem; right: 5.3rem;">
             <img src="skipImg/index/xian.png">
         </a>
         <a class="_close_red"></a>
@@ -50,14 +56,14 @@
 <div class="page" id="pageMap_jin">
     <div class="content _page_map">
         <!-- building a -->
-        <a class="_jin_1 _jin_building _building_a open-popup" data-type="jin_1" data-length="3" data-init="1" data-popup=".jin_1"></a>
-        <a class="_jin_2 _jin_building _building_a open-popup" data-type="jin_2" data-length="3" data-init="2" data-popup=".jin_2"></a>
-        <a class="_jin_3 _jin_building _building_a open-popup" data-type="jin_3" data-length="3" data-init="3" data-popup=".jin_3"></a>
+        <a class="_jin_1 _jin_building _building_a open-popup _openIn" data-type="jin_1" data-length="3" data-init="1" data-popup=".jin_1"></a>
+        <a class="_jin_2 _jin_building _building_a open-popup _openIn" data-type="jin_2" data-length="3" data-init="2" data-popup=".jin_2"></a>
+        <a class="_jin_3 _jin_building _building_a open-popup _openIn" data-type="jin_3" data-length="3" data-init="3" data-popup=".jin_3"></a>
 
         <div class="_map_div">
             <img src="skipImg/jin/jin_bg.jpg">
         </div>
-        <a class="_map_back back" href="#"></a>
+        <a class="_map_back back _closeOut" href="#"></a>
         <div class="jin-swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -83,16 +89,16 @@
 <div class="page" id="pageMap_yuan">
     <div class="content _page_map">
         <!-- building a -->
-        <a class="_yuan_1 _yuan_building _building_a open-popup" data-type="yuan_1" data-length="5" data-init="1" data-popup=".yuan_1"></a>
-        <a class="_yuan_2 _yuan_building _building_a open-popup" data-type="yuan_2" data-length="5" data-init="2" data-popup=".yuan_2"></a>
-        <a class="_yuan_3 _yuan_building _building_a open-popup" data-type="yuan_3" data-length="5" data-init="3" data-popup=".yuan_3"></a>
-        <a class="_yuan_4 _yuan_building _building_a open-popup" data-type="yuan_3" data-length="5" data-init="4" data-popup=".yuan_4"></a>
-        <a class="_yuan_5 _yuan_building _building_a open-popup" data-type="yuan_3" data-length="5" data-init="5" data-popup=".yuan_5"></a>
+        <a class="_yuan_1 _yuan_building _building_a open-popup _openIn" data-type="yuan_1" data-length="5" data-init="1" data-popup=".yuan_1"></a>
+        <a class="_yuan_2 _yuan_building _building_a open-popup _openIn" data-type="yuan_2" data-length="5" data-init="2" data-popup=".yuan_2"></a>
+        <a class="_yuan_3 _yuan_building _building_a open-popup _openIn" data-type="yuan_3" data-length="5" data-init="3" data-popup=".yuan_3"></a>
+        <a class="_yuan_4 _yuan_building _building_a open-popup _openIn" data-type="yuan_3" data-length="5" data-init="4" data-popup=".yuan_4"></a>
+        <a class="_yuan_5 _yuan_building _building_a open-popup _openIn" data-type="yuan_3" data-length="5" data-init="5" data-popup=".yuan_5"></a>
 
         <div class="_map_div">
             <img src="skipImg/jin/jin_bg.jpg">
         </div>
-        <a class="_map_back back" href="#"></a>
+        <a class="_map_back back _closeOut" href="#"></a>
         <div class="yuan-swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -118,22 +124,22 @@
 <div class="page" id="pageMap_ming">
     <div class="content _page_map">
         <!-- building a -->
-        <a class="_ming_1 _ming_building _building_a open-popup" data-type="ming_1" data-length="11" data-init="1" data-popup=".ming_1"></a>
-        <a class="_ming_2 _ming_building _building_a open-popup" data-type="ming_2" data-length="11" data-init="2" data-popup=".ming_2"></a>
-        <a class="_ming_3 _ming_building _building_a open-popup" data-type="ming_3" data-length="11" data-init="3" data-popup=".ming_3"></a>
-        <a class="_ming_4 _ming_building _building_a open-popup" data-type="ming_4" data-length="11" data-init="4" data-popup=".ming_4"></a>
-        <a class="_ming_5 _ming_building _building_a open-popup" data-type="ming_5" data-length="11" data-init="5" data-popup=".ming_5"></a>
-        <a class="_ming_6 _ming_building _building_a open-popup" data-type="ming_6" data-length="11" data-init="6" data-popup=".ming_6"></a>
-        <a class="_ming_7 _ming_building _building_a open-popup" data-type="ming_7" data-length="11" data-init="7" data-popup=".ming_7"></a>
-        <a class="_ming_8 _ming_building _building_a open-popup" data-type="ming_8" data-length="11" data-init="8" data-popup=".ming_8"></a>
-        <a class="_ming_9 _ming_building _building_a open-popup" data-type="ming_9" data-length="11" data-init="9" data-popup=".ming_9"></a>
-        <a class="_ming_10 _ming_building _building_a open-popup" data-type="ming_10" data-length="11" data-init="10" data-popup=".ming_10"></a>
-        <a class="_ming_11 _ming_building _building_a open-popup" data-type="ming_11" data-length="11" data-init="11" data-popup=".ming_11"></a>
+        <a class="_ming_1 _ming_building _building_a open-popup _openIn" data-type="ming_1" data-length="11" data-init="1" data-popup=".ming_1"></a>
+        <a class="_ming_2 _ming_building _building_a open-popup _openIn" data-type="ming_2" data-length="11" data-init="2" data-popup=".ming_2"></a>
+        <a class="_ming_3 _ming_building _building_a open-popup _openIn" data-type="ming_3" data-length="11" data-init="3" data-popup=".ming_3"></a>
+        <a class="_ming_4 _ming_building _building_a open-popup _openIn" data-type="ming_4" data-length="11" data-init="4" data-popup=".ming_4"></a>
+        <a class="_ming_5 _ming_building _building_a open-popup _openIn" data-type="ming_5" data-length="11" data-init="5" data-popup=".ming_5"></a>
+        <a class="_ming_6 _ming_building _building_a open-popup _openIn" data-type="ming_6" data-length="11" data-init="6" data-popup=".ming_6"></a>
+        <a class="_ming_7 _ming_building _building_a open-popup _openIn" data-type="ming_7" data-length="11" data-init="7" data-popup=".ming_7"></a>
+        <a class="_ming_8 _ming_building _building_a open-popup _openIn" data-type="ming_8" data-length="11" data-init="8" data-popup=".ming_8"></a>
+        <a class="_ming_9 _ming_building _building_a open-popup _openIn" data-type="ming_9" data-length="11" data-init="9" data-popup=".ming_9"></a>
+        <a class="_ming_10 _ming_building _building_a open-popup _openIn" data-type="ming_10" data-length="11" data-init="10" data-popup=".ming_10"></a>
+        <a class="_ming_11 _ming_building _building_a open-popup _openIn" data-type="ming_11" data-length="11" data-init="11" data-popup=".ming_11"></a>
 
         <div class="_map_div">
             <img src="skipImg/jin/jin_bg.jpg">
         </div>
-        <a class="_map_back back" href="#"></a>
+        <a class="_map_back back _closeOut" href="#"></a>
         <div class="ming-swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -157,16 +163,16 @@
 <div class="page" id="pageMap_min">
     <div class="content _page_map">
         <!-- building a -->
-        <a class="_min_1 _min_building _building_a open-popup" data-type="min_1" data-length="5" data-init="1" data-popup=".min_1"></a>
-        <a class="_min_2 _min_building _building_a open-popup" data-type="min_2" data-length="5" data-init="2" data-popup=".min_2"></a>
-        <a class="_min_3 _min_building _building_a open-popup" data-type="min_3" data-length="5" data-init="3" data-popup=".min_3"></a>
-        <a class="_min_4 _min_building _building_a open-popup" data-type="min_4" data-length="5" data-init="4" data-popup=".min_4"></a>
-        <a class="_min_5 _min_building _building_a open-popup" data-type="min_5" data-length="5" data-init="5" data-popup=".min_5"></a>
+        <a class="_min_1 _min_building _building_a open-popup _openIn" data-type="min_1" data-length="5" data-init="1" data-popup=".min_1"></a>
+        <a class="_min_2 _min_building _building_a open-popup _openIn" data-type="min_2" data-length="5" data-init="2" data-popup=".min_2"></a>
+        <a class="_min_3 _min_building _building_a open-popup _openIn" data-type="min_3" data-length="5" data-init="3" data-popup=".min_3"></a>
+        <a class="_min_4 _min_building _building_a open-popup _openIn" data-type="min_4" data-length="5" data-init="4" data-popup=".min_4"></a>
+        <a class="_min_5 _min_building _building_a open-popup _openIn" data-type="min_5" data-length="5" data-init="5" data-popup=".min_5"></a>
 
         <div class="_map_div">
             <img src="skipImg/jin/jin_bg.jpg">
         </div>
-        <a class="_map_back back" href="#"></a>
+        <a class="_map_back back _closeOut" href="#"></a>
         <div class="min-swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -190,17 +196,17 @@
 <div class="page" id="pageMap_xin">
     <div class="content _page_map">
         <!-- building a -->
-        <a class="_xin_1 _xin_building _building_a open-popup" data-type="xin_1" data-length="6" data-init="1" data-popup=".xin_1"></a>
-        <a class="_xin_2 _xin_building _building_a open-popup" data-type="xin_2" data-length="6" data-init="2" data-popup=".xin_2"></a>
-        <a class="_xin_3 _xin_building _building_a open-popup" data-type="xin_3" data-length="6" data-init="3" data-popup=".xin_3"></a>
-        <a class="_xin_4 _xin_building _building_a open-popup" data-type="xin_4" data-length="6" data-init="4" data-popup=".xin_4"></a>
-        <a class="_xin_5 _xin_building _building_a open-popup" data-type="xin_5" data-length="6" data-init="5" data-popup=".xin_5"></a>
-        <a class="_xin_6 _xin_building _building_a open-popup" data-type="xin_6" data-length="6" data-init="5" data-popup=".xin_6"></a>
+        <a class="_xin_1 _xin_building _building_a open-popup _openIn" data-type="xin_1" data-length="6" data-init="1" data-popup=".xin_1"></a>
+        <a class="_xin_2 _xin_building _building_a open-popup _openIn" data-type="xin_2" data-length="6" data-init="2" data-popup=".xin_2"></a>
+        <a class="_xin_3 _xin_building _building_a open-popup _openIn" data-type="xin_3" data-length="6" data-init="3" data-popup=".xin_3"></a>
+        <a class="_xin_4 _xin_building _building_a open-popup _openIn" data-type="xin_4" data-length="6" data-init="4" data-popup=".xin_4"></a>
+        <a class="_xin_5 _xin_building _building_a open-popup _openIn" data-type="xin_5" data-length="6" data-init="5" data-popup=".xin_5"></a>
+        <a class="_xin_6 _xin_building _building_a open-popup _openIn" data-type="xin_6" data-length="6" data-init="5" data-popup=".xin_6"></a>
 
         <div class="_map_div">
             <img src="skipImg/jin/jin_bg.jpg">
         </div>
-        <a class="_map_back back" href="#"></a>
+        <a class="_map_back back _closeOut" href="#"></a>
         <div class="xin-swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -224,19 +230,19 @@
 <div class="page" id="pageMap_xian">
     <div class="content _page_map">
         <!-- building a -->
-        <a class="_xian_1 _xian_building _building_a open-popup" data-type="xian_1" data-length="6" data-init="1" data-popup=".xian_1"></a>
-        <a class="_xian_2 _xian_building _building_a open-popup" data-type="xian_2" data-length="6" data-init="2" data-popup=".xian_2"></a>
-        <a class="_xian_3 _xian_building _building_a open-popup" data-type="xian_3" data-length="6" data-init="3" data-popup=".xian_3"></a>
-        <a class="_xian_4 _xian_building _building_a open-popup" data-type="xian_4" data-length="6" data-init="4" data-popup=".xian_4"></a>
-        <a class="_xian_5 _xian_building _building_a open-popup" data-type="xian_5" data-length="6" data-init="5" data-popup=".xian_5"></a>
-        <a class="_xian_6 _xian_building _building_a open-popup" data-type="xian_6" data-length="6" data-init="6" data-popup=".xian_6"></a>
-        <a class="_xian_7 _xian_building _building_a open-popup" data-type="xian_7" data-length="6" data-init="7" data-popup=".xian_7"></a>
-        <a class="_xian_8 _xian_building _building_a open-popup" data-type="xian_8" data-length="6" data-init="8" data-popup=".xian_8"></a>
+        <a class="_xian_1 _xian_building _building_a open-popup _openIn" data-type="xian_1" data-length="6" data-init="1" data-popup=".xian_1"></a>
+        <a class="_xian_2 _xian_building _building_a open-popup _openIn" data-type="xian_2" data-length="6" data-init="2" data-popup=".xian_2"></a>
+        <a class="_xian_3 _xian_building _building_a open-popup _openIn" data-type="xian_3" data-length="6" data-init="3" data-popup=".xian_3"></a>
+        <a class="_xian_4 _xian_building _building_a open-popup _openIn" data-type="xian_4" data-length="6" data-init="4" data-popup=".xian_4"></a>
+        <a class="_xian_5 _xian_building _building_a open-popup _openIn" data-type="xian_5" data-length="6" data-init="5" data-popup=".xian_5"></a>
+        <a class="_xian_6 _xian_building _building_a open-popup _openIn" data-type="xian_6" data-length="6" data-init="6" data-popup=".xian_6"></a>
+        <a class="_xian_7 _xian_building _building_a open-popup _openIn" data-type="xian_7" data-length="6" data-init="7" data-popup=".xian_7"></a>
+        <a class="_xian_8 _xian_building _building_a open-popup _openIn" data-type="xian_8" data-length="6" data-init="8" data-popup=".xian_8"></a>
 
         <div class="_map_div">
             <img src="skipImg/jin/jin_bg.jpg">
         </div>
-        <a class="_map_back back" href="#"></a>
+        <a class="_map_back back _closeOut" href="#"></a>
         <div class="xian-swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">

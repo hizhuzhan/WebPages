@@ -17,108 +17,47 @@
 
 </head>
 <style>
-    .content{
-        background-color: #fff;
-    }
-    /* search input */
-    .bar>.searchbar{
-        padding-left: 0rem;
-    }
-    .searchbar{
-        background-color: #fff !important;
-    }
-    .bar-nav>.searchbar>.search-input>label{
-        color: #a16d6d;
-    }
-    .bar-nav>.searchbar>.search-input>input{
-        background-color: #f4f4f4;
-        border: 0;
-        color: #be9c9c;
-    }
-    .bar-nav>.searchbar>.search-input>input::-webkit-input-placeholder{
-        color: #be9c9c;
-    }
-    .search-input label+input{
-        padding-left: 2rem;
-    }
-
-    .bar .button-link{
-        line-height: 1.4rem;
-        color: #a16d6d;
-    }
-    /* search input */
-    /* tab01 */
-    .buttons-tab .button{
-        color: #be9c9c;
-        font-weight: 800;
-    }
-    .buttons-tab .button.active{
-        color: #be9c9c;
-    }
-    .content>.buttons-tab{
-        border: 0;
-    }
-    .buttons-tab .button.active>span{
-        display: block;
-        width: 30px;
-        border: 1px solid;
-        margin-left: auto;
-        margin-right: auto;
-        border-color: #7d0000;
-        margin-top: -2px;
-    }
-    .buttons-tab .button.active{
-        border-color: #fff;
-    }
-
-    /* tab01 */
-
-    /* iSlider */
-    #_slide {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    #_slide > li {
-        position: relative;
-        width: 100%;
-        height: 270px;
-        margin: 5px auto 32px;
-        background-size: cover;
-
-    }
-    .iEl {
-        position: relative;
-        height: 100%;
+    #tab1>._row_2>.col-50>img{
         width: 100%;
     }
-    .iEl>ul>li {
-        border-radius: 15px;
+    #tab1>._row_2{
+        margin-top: 0.8rem;
     }
-    #loadc {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        margin: -48px 0 0 -48px;
+    #tab1>._row_3>span:nth-child(1){
+        margin-left: 4%;
+        line-height: 1.5rem;
+        font-size: 0.6rem;
     }
-
-    @media (max-width: 500px) {
-        #_slide > li {
-            /*width: 320px;*/
-            height: 180px;
-        }
-    }
-    ._tab01_content-block{
-        padding: 0;
-        margin: 0;
-    }
-    ._tab01_content-block>._slide_div{
-        background-color: #eaeaea;
+    #tab1>._row_3>span:nth-child(2){
+        line-height: 1.5rem;
+        float: right;
     }
 
-    /* iSlider */
-
+    #tab1>._row_4{
+        margin-left: -4%;
+    }
+    #tab1>._row_4>._book{
+        float: left;
+        width: 24%;
+    }
+    #tab1>._row_4>._book>img{
+        width: 100%;
+    }
+    #tab1>._row_4>._book_01{
+        margin-left: 4%;
+        padding-right: 0.3rem;
+    }
+    #tab1>._row_4>._book_02{
+        padding-right: 0.15rem;
+        padding-left: 0.15rem;
+    }
+    #tab1>._row_4>._book_03{
+        padding-right: 0.15rem;
+        padding-left: 0.15rem;
+    }
+    #tab1>._row_4>._book_04{
+        padding-left: 0.3rem;
+    }
 </style>
 <body>
 <div class="page">
@@ -147,6 +86,34 @@
                     <div class="content-block _tab01_content-block">
                         <div class="_slide_div">
                             <ul id="_slide"></ul>
+                        </div>
+                    </div>
+                    <div class="row _row_2">
+                        <div class="col-50">
+                            <img src="image/pageImg/index/find_02_01.png">
+                        </div>
+                        <div class="col-50">
+                            <img src="image/pageImg/index/find_02_02.png">
+                        </div>
+                    </div>
+                    <div class="row _row_3">
+                        <span>热门推荐</span>
+                        <span>
+                            <img src="image/pageImg/index/find_next.png">
+                        </span>
+                    </div>
+                    <div class="row _row_4">
+                        <div class="_book_01 _book">
+                            <img src="image/pageImg/index/find_03_04.png">
+                        </div>
+                        <div class="_book_02 _book">
+                            <img src="image/pageImg/index/find_03_03.png">
+                        </div>
+                        <div class="_book_03 _book">
+                            <img src="image/pageImg/index/find_03_02.png">
+                        </div>
+                        <div class="_book_04 _book">
+                            <img src="image/pageImg/index/find_03_01.png">
                         </div>
                     </div>
                 </div>
@@ -206,45 +173,7 @@
 <script src="js/pageJs/index.js"></script>
 
 <script>
-    var loadStep = 0;
-    var DATA = [
-        {content: "//be-fe.github.io/static/images/iSlider-card/1.jpg"},
-        {content: "//be-fe.github.io/static/images/iSlider-card/2.jpg"},
-        {content: "//be-fe.github.io/static/images/iSlider-card/3.jpg"},
-        {content: "//be-fe.github.io/static/images/iSlider-card/4.jpg"},
-        {content: "//be-fe.github.io/static/images/iSlider-card/5.jpg"},
-        {content: "//be-fe.github.io/static/images/iSlider-card/6.jpg"},
-        {content: "//be-fe.github.io/static/images/iSlider-card/7.jpg"},
-        {content: "//be-fe.github.io/static/images/iSlider-card/8.jpg"}
-    ];
-    var q = new queue();
 
-    q.awaitAll(function () {
-        setTimeout(function () {
-            init();
-        }, 1000);
-    });
-
-    function init() {
-        var mEl = document.getElementById('_slide');
-        var anims = iSlider._animateFuncs;
-        var iEl, iElWrapper, dEl;
-        iElWrapper = document.createElement('li');
-        dEl = document.createElement('p');
-        iEl = document.createElement('div');
-        iEl.className = 'iEl';
-        mEl.appendChild(iElWrapper);
-        iElWrapper.appendChild(iEl);
-        iElWrapper.appendChild(dEl);
-        new iSlider(iEl, DATA, {
-            animateType: 'flow',
-            isLooping: 1,
-            isOverspread: 1,
-            isAutoplay: 1,
-            animateTime: 2000,
-            duration: 2000
-        });
-    }
 </script>
 </body>
 </html>

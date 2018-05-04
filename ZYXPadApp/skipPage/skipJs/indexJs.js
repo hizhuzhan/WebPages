@@ -133,8 +133,8 @@ var creatMapSwiper = function(mapPageType){
     var map = '<div class="swiper-slide"><img src="skipImg/' + mapPageType + '/' + mapPageType + '_map.png"></div>';
     var str = '<div class="swiper-slide"><img src="skipImg/' + mapPageType + '/' + mapPageType + '_str.png"></div>';
 
-    $('.' + mapPageType + '-swiper-container>.swiper-wrapper').empty();
     $('._map_div>img').attr('src', 'skipImg/' + mapPageType + '/' + mapPageType + '_bg.jpg');
+    $('.' + mapPageType + '-swiper-container>.swiper-wrapper').empty();
     $('.' + mapPageType + '-swiper-container>.swiper-wrapper').append(info);
     $('.' + mapPageType + '-swiper-container>.swiper-wrapper').append(map);
     $('.' + mapPageType + '-swiper-container>.swiper-wrapper').append(str);

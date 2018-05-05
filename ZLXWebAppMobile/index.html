@@ -7,6 +7,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="css/light7.min.css">
     <link rel="stylesheet" href="css/light7-swiper.min.css">
@@ -17,51 +18,87 @@
 
 </head>
 <style>
-    #tab1>._row_2>.col-50>img{
-        width: 100%;
+    #_borrow_popUp>.bar-nav .icon{
+        margin-left: 0.3rem;
+        color: #666767;
     }
-    #tab1>._row_2{
-        margin-top: 0.8rem;
+    #_borrow_popUp>.bar-nav .title{
+        color: #000;
+        font-weight: 800;
     }
-    #tab1>._row_3>span:nth-child(1){
-        margin-left: 4%;
-        line-height: 1.5rem;
-        font-size: 0.6rem;
+    #_borrow_popUp .list-block .item-subtitle {
+        padding-top: 0.5rem;
     }
-    #tab1>._row_3>span:nth-child(2){
-        line-height: 1.5rem;
-        float: right;
+    #_borrow_popUp .list-block ._otr{
+        color: #6a6a6a;
+    }
+    #_borrow_popUp .list-block ._otr ._have{
+        color: #c0af3b;
+    }
+    #_borrow_popUp .list-block ._stat{
+        color: #bb3543;
+    }
+    #_borrow_popUp>.bar-nav ._edit{
+        margin-right: 0.3rem;
+        color: #bb3543;
     }
 
-    #tab1>._row_4{
-        margin-left: -4%;
+    #_borrow_popUp ._borrowFooter{
+        width: 100%;
+        height: 2.2rem;
+        position: relative;
+        top: calc(100% - 2.2rem);
+        background-color: #fff;
     }
-    #tab1>._row_4>._book{
+    #_borrow_popUp ._borrowFooter>._borrowFooterBtn{
+        width: 25%;
         float: left;
-        width: 24%;
+        padding: 0.1rem;
     }
-    #tab1>._row_4>._book>img{
+    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>div{
+        line-height: 2.2rem;
+    }
+    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btn{
+        background-color: #bfbfbf;
+        color: #fff;
+        text-align: center;
+    }
+    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btn:active{
+        background-color: #8c8c8c;
+    }
+    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btnSelect img{
+        width: 21%;
+    }
+    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btnSelect{
+        line-height: 2.6rem;
+        text-align: center;
+    }
+    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btn1{
+        margin: 0 0.05rem 0 0.05rem;
+    }
+    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btn2{
+        margin: 0 0.05rem;
+    }
+    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btn3{
+        margin: 0 0.05rem 0 0.05rem;;
+    }
+
+
+    /* _borrow_popUp start */
+    #_find_popUp>.content{
+        width: 100%;
+        height: 100%;
+    }
+    #_find_popUp>.content>img{
         width: 100%;
     }
-    #tab1>._row_4>._book_01{
-        margin-left: 4%;
-        padding-right: 0.3rem;
-    }
-    #tab1>._row_4>._book_02{
-        padding-right: 0.15rem;
-        padding-left: 0.15rem;
-    }
-    #tab1>._row_4>._book_03{
-        padding-right: 0.15rem;
-        padding-left: 0.15rem;
-    }
-    #tab1>._row_4>._book_04{
-        padding-left: 0.3rem;
-    }
+    /* _borrow_popUp end */
+
+    
 </style>
 <body>
 <div class="page">
-    <header class="bar bar-nav">
+    <header class="bar bar-nav _index_bar_nav">
         <div class="searchbar row">
             <div class="search-input col-90">
                 <label class="icon icon-search" for="search"></label>
@@ -89,12 +126,13 @@
                         </div>
                     </div>
                     <div class="row _row_2">
-                        <div class="col-50">
+                        <!-- borrow -->
+                        <a class="col-50 open-popup" data-popup="#_borrow_popUp">
                             <img src="image/pageImg/index/find_02_01.png">
-                        </div>
-                        <div class="col-50">
+                        </a>
+                        <a class="col-50">
                             <img src="image/pageImg/index/find_02_02.png">
-                        </div>
+                        </a>
                     </div>
                     <div class="row _row_3">
                         <span>热门推荐</span>
@@ -150,18 +188,193 @@
         </a>
         <a class="tab-item" href="#">
             <span class="icon icon-me"></span>
-            <span class="tab-label">我</span>
+            <span class="tab-label">社区</span>
         </a>
-        <a class="tab-item" href="#">
+        <a class="tab-item open-popup" data-popup="#_find_popUp">
             <span class="icon icon-star"></span>
-            <span class="tab-label">收藏</span>
+            <span class="tab-label">寻觅</span>
         </a>
         <a class="tab-item" href="#">
             <span class="icon icon-settings"></span>
-            <span class="tab-label">设置</span>
+            <span class="tab-label">我的</span>
         </a>
     </nav>
 </div>
+
+<!-- borrow popUp -->
+<div id="_borrow_popUp" class="popup">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left close-popup" data-transition='slide-out'>
+            <span class="icon icon-left"></span>
+        </a>
+        <h1 class="title">借阅蓝</h1>
+        <a class="button button-link button-nav pull-right _edit">
+            编辑
+        </a>
+    </header>
+    <div class="content">
+        <div class="card">
+            <div class="card-content">
+                <div class="list-block media-list">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media">
+                                <img src="image/pageImg/index/borrow_book01.jpg" width="114">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">存在与虚无</div>
+                                </div>
+                                <div class="item-subtitle _otr _author">作者：让·保罗·萨特（法）</div>
+                                <div class="item-subtitle _otr ">拥有者：<span class="_have">小番茄</span></div>
+                                <div class="item-subtitle _otr _stat">请求借阅中...</div>
+                                <div class="item-subtitle _otr">到期时间：<span class="_dueTo">2018-12-17</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="list-block media-list">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media">
+                                <img src="image/pageImg/index/borrow_book02.jpg" width="114">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">语言、真理与逻辑</div>
+                                </div>
+                                <div class="item-subtitle _otr _author">作者：A·J·艾耶尔（英）</div>
+                                <div class="item-subtitle _otr ">拥有者：<span class="_have">小番茄</span></div>
+                                <div class="item-subtitle _otr _stat">请求借阅中...</div>
+                                <div class="item-subtitle _otr">到期时间：<span class="_dueTo">2018-12-17</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="list-block media-list">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media">
+                                <img src="image/pageImg/index/borrow_book03.jpg" width="114">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">精神现象学</div>
+                                </div>
+                                <div class="item-subtitle _otr _author">作者：黑格尔（德）</div>
+                                <div class="item-subtitle _otr ">拥有者：<span class="_have">小番茄</span></div>
+                                <div class="item-subtitle _otr _stat">请求借阅中...</div>
+                                <div class="item-subtitle _otr">到期时间：<span class="_dueTo">2018-12-17</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="list-block media-list">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media">
+                                <img src="image/pageImg/index/borrow_book01.jpg" width="114">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">存在与虚无</div>
+                                </div>
+                                <div class="item-subtitle _otr _author">作者：让·保罗·萨特（法）</div>
+                                <div class="item-subtitle _otr ">拥有者：<span class="_have">小番茄</span></div>
+                                <div class="item-subtitle _otr _stat">请求借阅中...</div>
+                                <div class="item-subtitle _otr">到期时间：<span class="_dueTo">2018-12-17</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="list-block media-list">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media">
+                                <img src="image/pageImg/index/borrow_book02.jpg" width="114">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">语言、真理与逻辑</div>
+                                </div>
+                                <div class="item-subtitle _otr _author">作者：A·J·艾耶尔（英）</div>
+                                <div class="item-subtitle _otr ">拥有者：<span class="_have">小番茄</span></div>
+                                <div class="item-subtitle _otr _stat">请求借阅中...</div>
+                                <div class="item-subtitle _otr">到期时间：<span class="_dueTo">2018-12-17</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="list-block media-list">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-media">
+                                <img src="image/pageImg/index/borrow_book03.jpg" width="114">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">精神现象学</div>
+                                </div>
+                                <div class="item-subtitle _otr _author">作者：黑格尔（德）</div>
+                                <div class="item-subtitle _otr ">拥有者：<span class="_have">小番茄</span></div>
+                                <div class="item-subtitle _otr _stat">请求借阅中...</div>
+                                <div class="item-subtitle _otr">到期时间：<span class="_dueTo">2018-12-17</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="_borrowFooter">
+        <div class="_borrowFooterBtn">
+            <div class="_btnSelect">
+                <span>
+                    <img src="image/pageImg/index/borrow_disSelect.png">
+                </span>
+                <span>全选</span>
+            </div>
+        </div>
+        <div class="_borrowFooterBtn">
+            <div class="_btn _btn1">取消借阅</div>
+        </div>
+        <div class="_borrowFooterBtn">
+            <div class="_btn _btn2">收到图书</div>
+        </div>
+        <div class="_borrowFooterBtn">
+            <div class="_btn _btn3">续借图书</div>
+        </div>
+    </div>
+</div>
+
+<!-- borrow popUp -->
+<div id="_find_popUp" class="popup">
+    <div class="content">
+        <img src="image/pageImg/index/find_bg.jpg">
+    </div>
+</div>
+
+
 <script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/light7.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/light7-swiper.min.js' charset='utf-8'></script>

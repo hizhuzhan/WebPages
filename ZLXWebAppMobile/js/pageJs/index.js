@@ -1,3 +1,6 @@
+
+
+
 var loadStep = 0;
 var DATA = [
     {content: "image/pageImg/index/find_01_01.png"},
@@ -49,3 +52,14 @@ function init() {
         duration: 2000
     });
 }
+
+/**
+ * borrow popUp page js start
+ */
+
+
+
+/**
+ * borrow popUp page js end
+ */
+

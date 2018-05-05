@@ -1,6 +1,3 @@
-
-
-
 var loadStep = 0;
 var DATA = [
     {content: "image/pageImg/index/find_01_01.png"},
@@ -63,3 +60,32 @@ function init() {
  * borrow popUp page js end
  */
 
+
+/**
+ * find popUp page js start
+ */
+$('#_find_popUp_click').on('click', function(){
+    $.popup('#_find_popUp');
+    setTimeout(function () {
+        $.alert('附近没小伙伴哦~');
+    }, 4000);
+});
+/**
+ * find popUp page js end
+ */
+
+/**
+ * class popUp page js start
+ */
+$('#_class_book_01').on('click', function(){
+    $.popup('#_class_popUp_zx');
+});
+$('#_class_book_02').on('click', function(){
+    $.popup('#_class_popUp_sh');
+});
+$('#_class_book_03').on('click', function(){
+    $.popup('#_class_popUp_fl');
+});
+/**
+ * class popUp page js end
+ */

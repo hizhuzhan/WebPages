@@ -31,7 +31,7 @@
     color: #a16d6d;
 }
 /* search input */
-/* tab01 */
+/* tab01 start*/
 .buttons-tab .button{
     color: #be9c9c;
     font-weight: 800;
@@ -54,8 +54,27 @@
 .buttons-tab .button.active{
     border-color: #fff;
 }
+/* tab01 end */
 
-/* tab01 */
+/* tab02 start */
+._indexPage .tabs #tab2{
+
+}
+._indexPage .tabs #tab2 .card img{
+    width: 100%;
+}
+._indexPage .tabs #tab2 .card{
+    margin-left: 0;
+    margin-right: 0;
+    box-shadow: none;
+}
+._indexPage .content-block{
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
+    margin: 1rem 0 0 0;
+}
+/* tab02 end */
+
 
 /* iSlider */
 #_slide {
@@ -101,7 +120,6 @@
 }
 ._tab01_content-block{
     padding: 0;
-    margin: 0;
 }
 ._tab01_content-block>._slide_div{
     background-color: #eaeaea;
@@ -150,5 +168,145 @@
 #tab1>._row_4>._book_04{
     padding-left: 0.3rem;
 }
-
 /* find */
+
+
+/* find page animation start */
+._content{
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    top: 22%;
+}
+._content>img{
+    width: 1.5rem;
+    position: absolute;
+    left: calc(50% - 0.75rem);
+
+}
+.container {
+    position: absolute;
+    top: 20%;
+    left: calc(50% - 19%);
+    width: 40%;
+    z-index: 2;
+}
+
+.spliter {
+    width: 100%;
+    height: 20px;
+}
+
+.wave {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 28px;
+}
+
+.wave .circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+/* 波纹效果 */
+.wave.ripple .circle {
+    width: calc(100% - 6px); /* 减去边框的大小 */
+    height: calc(100% - 6px);/* 减去边框的大小 */
+    border: 3px solid #fff;
+}
+
+.wave.ripple .circle:first-child {
+    -webkit-animation: circle-opacity 2s infinite;
+}
+
+.wave.ripple .circle:nth-child(2) {
+    -webkit-animation: circle-opacity 2s infinite;
+    -webkit-animation-delay: 0.4s;
+}
+
+.wave.ripple .circle:nth-child(3) {
+    -webkit-animation: circle-opacity 2s infinite;
+    -webkit-animation-delay: 0.8s;
+}
+
+.wave.ripple.danger {
+    color: red;
+    margin: 0 auto;
+}
+
+.wave.ripple.danger .circle {
+    border-color: red;
+    border: 0;
+}
+
+.wave.ripple.warning {
+    color: orange;
+}
+
+.wave.ripple.warning .circle {
+    border-color: orange;
+}
+
+/* 波动效果 */
+.wave.solid .circle{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.wave.solid .circle:first-child {
+    -webkit-animation: circle-opacity 2s infinite;
+}
+
+.wave.solid.danger {
+    color: red;
+}
+
+.wave.solid.danger .circle{
+    background: red;
+}
+
+@-webkit-keyframes circle-opacity{
+    from {
+        -webkit-opacity: 1;
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-opacity: 0;
+        -webkit-transform: scale(1);
+    }
+}
+
+
+/*.wave.ripple .circle:first-child {*/
+    /*animation: circle-opacity 2s infinite;*/
+/*}*/
+
+/*.wave.ripple .circle:nth-child(2) {*/
+    /*animation: circle-opacity 2s infinite;*/
+    /*animation-delay: 0.4s;*/
+/*}*/
+
+/*.wave.ripple .circle:nth-child(3) {*/
+    /*animation: circle-opacity 2s infinite;*/
+    /*animation-delay: 0.8s;*/
+/*}*/
+/*.wave.solid .circle:first-child {*/
+    /*animation: circle-opacity 2s infinite;*/
+/*}*/
+/*@-webkit-keyframes circle-opacity{*/
+    /*from {*/
+        /*opacity: 1;*/
+        /*transform: scale(0);*/
+    /*}*/
+    /*to {*/
+        /*opacity: 0;*/
+        /*transform: scale(1);*/
+    /*}*/
+/*}*/
+
+/* find page animation end */

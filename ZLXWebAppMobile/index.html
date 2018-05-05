@@ -6,7 +6,7 @@
     <title>我的生活</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="/favicon.ico">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="css/light7.min.css">
@@ -18,86 +18,102 @@
 
 </head>
 <style>
-    #_borrow_popUp>.bar-nav .icon{
+    .popup > .bar-nav .icon {
         margin-left: 0.3rem;
         color: #666767;
     }
-    #_borrow_popUp>.bar-nav .title{
+
+    .popup > .bar-nav .title {
         color: #000;
         font-weight: 800;
     }
+
     #_borrow_popUp .list-block .item-subtitle {
         padding-top: 0.5rem;
     }
-    #_borrow_popUp .list-block ._otr{
+
+    #_borrow_popUp .list-block ._otr {
         color: #6a6a6a;
     }
-    #_borrow_popUp .list-block ._otr ._have{
+
+    #_borrow_popUp .list-block ._otr ._have {
         color: #c0af3b;
     }
-    #_borrow_popUp .list-block ._stat{
+
+    #_borrow_popUp .list-block ._stat {
         color: #bb3543;
     }
-    #_borrow_popUp>.bar-nav ._edit{
+
+    #_borrow_popUp > .bar-nav ._edit {
         margin-right: 0.3rem;
         color: #bb3543;
     }
 
-    #_borrow_popUp ._borrowFooter{
+    #_borrow_popUp ._borrowFooter {
         width: 100%;
         height: 2.2rem;
         position: relative;
         top: calc(100% - 2.2rem);
         background-color: #fff;
     }
-    #_borrow_popUp ._borrowFooter>._borrowFooterBtn{
+
+    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn {
         width: 25%;
         float: left;
         padding: 0.1rem;
     }
-    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>div{
+
+    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > div {
         line-height: 2.2rem;
     }
-    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btn{
+
+    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btn {
         background-color: #bfbfbf;
         color: #fff;
         text-align: center;
     }
-    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btn:active{
+
+    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btn:active {
         background-color: #8c8c8c;
     }
-    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btnSelect img{
+
+    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btnSelect img {
         width: 21%;
     }
-    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btnSelect{
+
+    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btnSelect {
         line-height: 2.6rem;
         text-align: center;
     }
-    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btn1{
+
+    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btn1 {
         margin: 0 0.05rem 0 0.05rem;
     }
-    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btn2{
+
+    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btn2 {
         margin: 0 0.05rem;
     }
-    #_borrow_popUp ._borrowFooter>._borrowFooterBtn>._btn3{
+
+    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btn3 {
         margin: 0 0.05rem 0 0.05rem;;
     }
 
-
     /* _borrow_popUp start */
-    #_find_popUp>.content{
+    #_find_popUp > .content {
         width: 100%;
         height: 100%;
     }
-    #_find_popUp>.content>img{
+
+    #_find_popUp > .content > img {
         width: 100%;
     }
+
     /* _borrow_popUp end */
 
-    
+
 </style>
 <body>
-<div class="page">
+<div class="page _indexPage">
     <header class="bar bar-nav _index_bar_nav">
         <div class="searchbar row">
             <div class="search-input col-90">
@@ -159,7 +175,16 @@
                 <!-- tab2 -->
                 <div id="tab2" class="tab">
                     <div class="content-block">
-                        <p>This is tab 2 content</p>
+                        <div class="card" id="_class_book_01">
+
+                            <img src="image/pageImg/index/class_03.jpg">
+                        </div>
+                        <div class="card" id="_class_book_02">
+                            <img src="image/pageImg/index/class_02.jpg">
+                        </div>
+                        <div class="card" id="_class_book_03">
+                            <img src="image/pageImg/index/class_01.jpg">
+                        </div>
                     </div>
                 </div>
 
@@ -190,7 +215,7 @@
             <span class="icon icon-me"></span>
             <span class="tab-label">社区</span>
         </a>
-        <a class="tab-item open-popup" data-popup="#_find_popUp">
+        <a class="tab-item" id="_find_popUp_click">
             <span class="icon icon-star"></span>
             <span class="tab-label">寻觅</span>
         </a>
@@ -367,12 +392,58 @@
     </div>
 </div>
 
-<!-- borrow popUp -->
+<!-- find popUp -->
 <div id="_find_popUp" class="popup">
+    <div class="container">
+        <div class="wave ripple danger">
+            <div class="circle" style="background-color: rgb(213,32,52,0.25);"></div>
+            <div class="circle" style="background-color: rgb(213,32,52,0.65);"></div>
+            <div class="circle" style="background-color: rgb(213,32,52,1);"></div>
+        </div>
+    </div>
+    <div class="_content">
+        <img src="image/pageImg/index/find_location.png">
+    </div>
     <div class="content">
         <img src="image/pageImg/index/find_bg.jpg">
     </div>
 </div>
+
+<!-- class popUp -->
+<div id="_class_popUp_zx" class="popup">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left close-popup" data-transition='slide-out'>
+            <span class="icon icon-left"></span>
+        </a>
+        <h1 class="title">哲学类</h1>
+    </header>
+    <div class="content">
+
+    </div>
+</div>
+<div id="_class_popUp_sh" class="popup">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left close-popup" data-transition='slide-out'>
+            <span class="icon icon-left"></span>
+        </a>
+        <h1 class="title">社会科学类</h1>
+    </header>
+    <div class="content">
+
+    </div>
+</div>
+<div id="_class_popUp_fl" class="popup">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left close-popup" data-transition='slide-out'>
+            <span class="icon icon-left"></span>
+        </a>
+        <h1 class="title">法律类</h1>
+    </header>
+    <div class="content">
+
+    </div>
+</div>
+
 
 
 <script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>

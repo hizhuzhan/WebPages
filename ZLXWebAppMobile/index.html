@@ -9,123 +9,170 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/light7.min.css">
     <link rel="stylesheet" href="css/light7-swiper.min.css">
-
     <link href="css/iSilder/iSlider.css" rel="stylesheet">
-
     <link rel="stylesheet" href="css/pageCss/index.css">
-
 </head>
 <style>
-    .popup > .bar-nav .icon {
-        margin-left: 0.3rem;
-        color: #666767;
-    }
-
-    .popup > .bar-nav .title {
-        color: #000;
-        font-weight: 800;
-    }
-
-    #_borrow_popUp .list-block .item-subtitle {
-        padding-top: 0.5rem;
-    }
-
-    #_borrow_popUp .list-block ._otr {
-        color: #6a6a6a;
-    }
-
-    #_borrow_popUp .list-block ._otr ._have {
-        color: #c0af3b;
-    }
-
-    #_borrow_popUp .list-block ._stat {
-        color: #bb3543;
-    }
-
-    #_borrow_popUp > .bar-nav ._edit {
-        margin-right: 0.3rem;
-        color: #bb3543;
-    }
-
-    #_borrow_popUp ._borrowFooter {
-        width: 100%;
-        height: 2.2rem;
-        position: relative;
-        top: calc(100% - 2.2rem);
-        background-color: #fff;
-    }
-
-    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn {
-        width: 25%;
-        float: left;
-        padding: 0.1rem;
-    }
-
-    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > div {
-        line-height: 2.2rem;
-    }
-
-    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btn {
-        background-color: #bfbfbf;
-        color: #fff;
-        text-align: center;
-    }
-
-    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btn:active {
-        background-color: #8c8c8c;
-    }
-
-    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btnSelect img {
-        width: 21%;
-    }
-
-    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btnSelect {
-        line-height: 2.6rem;
-        text-align: center;
-    }
-
-    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btn1 {
-        margin: 0 0.05rem 0 0.05rem;
-    }
-
-    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btn2 {
-        margin: 0 0.05rem;
-    }
-
-    #_borrow_popUp ._borrowFooter > ._borrowFooterBtn > ._btn3 {
-        margin: 0 0.05rem 0 0.05rem;;
-    }
-
-    /* _borrow_popUp start */
-    #_find_popUp > .content {
-        width: 100%;
-        height: 100%;
-    }
-
-    #_find_popUp > .content > img {
-        width: 100%;
-    }
-
-    /* _borrow_popUp end */
-
-
 </style>
 <body>
-<div class="page _indexPage">
+<nav class="bar bar-tab _indexBars hide">
+    <a class="tab-item no-transition replace active" href="#index">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">首页</span>
+    </a>
+    <a class="tab-item no-transition replace" href="#community">
+        <span class="icon icon-me"></span>
+        <span class="tab-label">社区</span>
+    </a>
+    <a class="tab-item no-transition replace" id="_find_popUp_click">
+        <span class="icon icon-star"></span>
+        <span class="tab-label">寻觅</span>
+    </a>
+    <a class="tab-item no-transition replace" id="minePageBar" href="#minePage">
+        <span class="icon icon-settings"></span>
+        <span class="tab-label">我的</span>
+    </a>
+</nav>
+<div class="page _loginPage" id="loginPage">
+    <div class="_body_img">
+    </div>
+    <div class="_body_cover">
+        <img src="image/pageImg/login_logo.png">
+    </div>
+    <div class="_body_form">
+        <div class="list-block">
+            <ul>
+                <!-- Text inputs -->
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-name"><img class="_userName" src="image/pageImg/login_username_logo.png"></i></div>
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input id="_username" type="text" placeholder="借阅证账号">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-name"><img class="_passWord" src="image/pageImg/login_password_logo.png"></i></div>
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input id="_password" type="password" placeholder="借阅证密码">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content-block">
+            <div class="row">
+                <div class="_loginButton"><a class="button button-big button-fill button-danger">登陆</a></div>
+            </div>
+            <div class="_logon">
+                <a>忘记密码</a>
+                <a>立即注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page _indexPage" id="index">
     <header class="bar bar-nav _index_bar_nav">
-        <div class="searchbar row">
+        <div class="searchbar row _searchBar">
+            <a class="button button-link button-nav pull-right col-10 _backSearch hide"><span class="icon icon-left"></span></a>
             <div class="search-input col-90">
                 <label class="icon icon-search" for="search"></label>
-                <input type="search" id="search" placeholder="标题, 作者, 来源, 全文">
+                <input class="_searchInput" type="search" id="search" placeholder="标题, 作者, 来源, 全文">
             </div>
-            <a class="button button-link button-nav pull-right col-10"><span class="icon icon-menu"></span>
+            <a class="button button-link button-nav pull-right col-10 _others"><span class="icon icon-menu"></span>
             </a>
         </div>
     </header>
 
-    <div class="content">
+    <div class="content _indexContent">
+        <!-- search Page -->
+        <div class="_searchPage hide">
+            <div class="content">
+                <div class="row _searchTitle">
+                    <div class="col-100">
+                        <div>书源</div>
+                    </div>
+                </div>
+                <div class="row _searchInfo">
+                    <div class="col-33">
+                        <div class="_searchBook">图书馆书籍</div>
+                    </div>
+                    <div class="col-33">
+                        <div class="_searchBook">电子书</div>
+                    </div>
+                    <div class="col-33">
+                        <div class="_searchBook">共享书籍</div>
+                    </div>
+                </div>
+                <div class="row _searchTitle">
+                    <div class="col-100">
+                        <div>借阅状态</div>
+                    </div>
+                </div>
+                <div class="row _searchInfo">
+                    <div class="col-33">
+                        <div class="_searchBook">全部</div>
+                    </div>
+                    <div class="col-33">
+                        <div class="_searchBook">可借</div>
+                    </div>
+                    <div class="col-33">
+                        <div class="_searchBook">不可借</div>
+                    </div>
+                </div>
+                <div class="row _searchTitle">
+                    <div class="col-100">
+                        <div>字段</div>
+                    </div>
+                </div>
+                <div class="row _searchInfo">
+                    <div class="col-33">
+                        <div class="_searchBook">全部</div>
+                    </div>
+                    <div class="col-33">
+                        <div class="_searchBook">书名</div>
+                    </div>
+                    <div class="col-33">
+                        <div class="_searchBook">作者</div>
+                    </div>
+                </div>
+                <div class="row _searchInfo">
+                    <div class="col-33">
+                        <div class="_searchBook">主题词</div>
+                    </div>
+                    <div class="col-33">
+                        <div class="_searchBook">出版号</div>
+                    </div>
+                    <div class="col-33">
+                        <div class="_searchBook">索书号</div>
+                    </div>
+                </div>
+                <div class="row _searchTitle">
+                    <div class="col-100">
+                        <div>类型</div>
+                    </div>
+                </div>
+                <div class="row _searchInfo">
+                    <div class="col-33">
+                        <div class="_searchBook">全部</div>
+                    </div>
+                    <div class="col-33">
+                        <div class="_searchBook">中文书名</div>
+                    </div>
+                    <div class="col-33">
+                        <div class="_searchBook">外文图书</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="buttons-tab">
             <a href="#tab1" class="tab-link active button">发现<span></span></a>
             <a href="#tab2" class="tab-link button">分类<span></span></a>
@@ -134,7 +181,7 @@
         </div>
         <div class="content-block">
             <div class="tabs">
-                <!-- tab1 -->
+                <!-- tab1 find -->
                 <div id="tab1" class="tab active">
                     <div class="content-block _tab01_content-block">
                         <div class="_slide_div">
@@ -143,10 +190,10 @@
                     </div>
                     <div class="row _row_2">
                         <!-- borrow -->
-                        <a class="col-50 open-popup" data-popup="#_borrow_popUp">
+                        <a class="col-50" id="_open_borrow_popUp">
                             <img src="image/pageImg/index/find_02_01.png">
                         </a>
-                        <a class="col-50">
+                        <a class="col-50" id="_return_borrow_popUp">
                             <img src="image/pageImg/index/find_02_02.png">
                         </a>
                     </div>
@@ -172,11 +219,10 @@
                     </div>
                 </div>
 
-                <!-- tab2 -->
+                <!-- tab2 class -->
                 <div id="tab2" class="tab">
                     <div class="content-block">
                         <div class="card" id="_class_book_01">
-
                             <img src="image/pageImg/index/class_03.jpg">
                         </div>
                         <div class="card" id="_class_book_02">
@@ -188,42 +234,253 @@
                     </div>
                 </div>
 
-                <!-- tab3 -->
+                <!-- tab3 rank -->
                 <div id="tab3" class="tab">
                     <div class="content-block">
-                        <p>This is tab 3 content</p>
+                        <div class="card">
+                            <div class="card-header">
+                                藏书榜
+                                <span>
+                                    <img src="image/pageImg/index/find_next.png">
+                                </span>
+                            </div>
+                            <div class="card-content">
+                                <div class="list-block media-list">
+                                    <ul>
+                                        <li class="item-content">
+                                            <div class="item-media">
+                                                <img src="image/pageImg/index/rank_01.jpg" width="80">
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-subtitle">
+                                                    <span class="_img">
+                                                        <img src="image/pageImg/index/rank_icon_01.png">
+                                                    </span>
+                                                    <span class="_type">
+                                                        戏剧的味道
+                                                    </span>
+                                                    <span class="_info">
+                                                        <!--黄美序著，山东画报出版社-->
+                                                        黄美序著，山东画报出版社
+                                                    </span>
+                                                </div>
+                                                <div class="item-subtitle">
+                                                    <span class="_img">
+                                                        <img src="image/pageImg/index/rank_icon_02.png">
+                                                    </span>
+                                                    <span class="_type">
+                                                        滚滚红尘
+                                                    </span>
+                                                    <span class="_info">
+                                                        三毛著
+                                                    </span>
+                                                </div>
+                                                <div class="item-subtitle">
+                                                    <span class="_img">
+                                                        <img src="image/pageImg/index/rank_icon-03.png">
+                                                    </span>
+                                                    <span class="_type">
+                                                        牡丹亭
+                                                    </span>
+                                                    <span class="_info">
+                                                        汤显祖著
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                热读榜
+                                <span>
+                                    <img src="image/pageImg/index/find_next.png">
+                                </span>
+                            </div>
+                            <div class="card-content">
+                                <div class="list-block media-list">
+                                    <ul>
+                                        <li class="item-content">
+                                            <div class="item-media">
+                                                <img src="image/pageImg/index/rank_02.jpg" width="80">
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-subtitle">
+                                                    <span class="_img">
+                                                        <img src="image/pageImg/index/rank_icon_01.png">
+                                                    </span>
+                                                    <span class="_type">
+                                                        窥看舞台
+                                                    </span>
+                                                    <span class="_info">
+                                                        <!--黄美序著，山东画报出版社-->
+                                                        妹尾河童著，广西师范大学
+                                                    </span>
+                                                </div>
+                                                <div class="item-subtitle">
+                                                    <span class="_img">
+                                                        <img src="image/pageImg/index/rank_icon_02.png">
+                                                    </span>
+                                                    <span class="_type">
+                                                        西厢记
+                                                    </span>
+                                                    <span class="_info">
+                                                        王实甫著
+                                                    </span>
+                                                </div>
+                                                <div class="item-subtitle">
+                                                    <span class="_img">
+                                                        <img src="image/pageImg/index/rank_icon-03.png">
+                                                    </span>
+                                                    <span class="_type">
+                                                        四大名剧
+                                                    </span>
+                                                    <span class="_info">
+                                                        孔尚任等著
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- tab4 -->
                 <div id="tab4" class="tab">
+                    <div class="_title01">
+                        <img src="image/pageImg/index/group_title_01.png">
+                    </div>
+                    <div class="_title02">
+                        <img src="image/pageImg/index/group_title_02.png">
+                    </div>
                     <div class="content-block">
-                        <p>This is tab 3 content</p>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="list-block media-list">
+                                    <ul>
+                                        <li class="item-content">
+                                            <div class="item-media">
+                                                <img src="image/pageImg/index/group_info_01.png" width="160">
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">欧美剧场艺术中彻底的变革</div>
+                                                </div>
+                                                <div class="item-subtitler">雷曼用“后戏剧剧场”这一术语，涵盖了上世纪七十年代至九十年代欧美剧场艺术中的一种彻底的变革趋势。这种趋势反对以摹仿、情节为基础的戏剧与戏剧性，反对文本之上的剧场创作结构方式，强调剧场艺术各种...</div>
+                                                <div class="item-subtitler">
+                                                    <img src="image/pageImg/index/group_info_footer.png">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="list-block media-list">
+                                    <ul>
+                                        <li class="item-content">
+                                            <div class="item-media">
+                                                <img src="image/pageImg/index/group_info_02.png" width="160">
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">四合书屋里的历史情怀</div>
+                                                </div>
+                                                <div class="item-subtitler">雷曼用“后戏剧剧场”这一术语，涵盖了上世纪七十年代至九十年代欧美剧场艺术中的一种彻底的变革趋势。这种趋势反对以摹仿、情节为基础的戏剧与戏剧性，反对文本之上的剧场创作结构方式，强调剧场艺术各种...</div>
+                                                <div class="item-subtitler">
+                                                    <img src="image/pageImg/index/group_info_footer.png">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
+<!-- comm page -->
+<div class="page _indexPage _commPage" id="community">
+    <header class="bar bar-nav _index_bar_nav">
+        <div class="searchbar row">
+            <div class="search-input col-90">
+                <label class="icon icon-search" for="search"></label>
+                <input type="search" id="_commSearch" placeholder="标题, 作者, 来源, 全文">
+            </div>
+            <a class="button button-link button-nav pull-right col-10 _others"><span class="icon icon-menu"></span>
+            </a>
+            <img src="image/pageImg/index/comm_title.png">
+        </div>
 
-    <nav class="bar bar-tab">
-        <a class="tab-item active" href="#">
-            <span class="icon icon-home"></span>
-            <span class="tab-label">首页</span>
-        </a>
-        <a class="tab-item" href="#">
-            <span class="icon icon-me"></span>
-            <span class="tab-label">社区</span>
-        </a>
-        <a class="tab-item" id="_find_popUp_click">
-            <span class="icon icon-star"></span>
-            <span class="tab-label">寻觅</span>
-        </a>
-        <a class="tab-item" href="#">
-            <span class="icon icon-settings"></span>
-            <span class="tab-label">我的</span>
-        </a>
-    </nav>
+        <!--<div class="searchbar row _searchBar">-->
+            <!--<a class="button button-link button-nav pull-right col-10 _backSearch hide"><span class="icon icon-left"></span></a>-->
+            <!--<div class="search-input col-90">-->
+                <!--<label class="icon icon-search" for="search"></label>-->
+                <!--<input class="_searchInput" type="search" id="_commSearch" placeholder="标题, 作者, 来源, 全文">-->
+            <!--</div>-->
+            <!--<a class="button button-link button-nav pull-right col-10 _others"><span class="icon icon-menu"></span>-->
+            <!--</a>-->
+            <!--<img src="image/pageImg/index/comm_title_01.png">-->
+        <!--</div>-->
+    </header>
+
+    <div class="content">
+        <div class="content-block">
+            <div class="card">
+                <div class="card-content">
+                    <img src="image/pageImg/index/comm_info_01.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img src="image/pageImg/index/comm_info_02.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- mine page -->
+<div class="page _indexPage _minePage" id="minePage">
+    <header class="bar bar-nav _index_bar_nav">
+        <div class="searchbar row">
+            <div class="search-input col-90">
+                <label class="icon icon-search" for="search"></label>
+                <input type="search" id="_mineSearch" placeholder="标题, 作者, 来源, 全文">
+            </div>
+            <a class="button button-link button-nav pull-right col-10 _others"><span class="icon icon-menu"></span>
+            </a>
+            <img class="_mineTitle" src="image/pageImg/index/mine_title_01.png">
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="content-block">
+            <div class="card">
+                <div class="card-content">
+                    <img class="_mineContent01" src="image/pageImg/index/mine_info_01.png">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="_mineSees">
+                    </div>
+                    <img class="_mineContent02" src="image/pageImg/index/mine_info_02.png">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- borrow popUp -->
@@ -232,7 +489,7 @@
         <a class="button button-link button-nav pull-left close-popup" data-transition='slide-out'>
             <span class="icon icon-left"></span>
         </a>
-        <h1 class="title">借阅蓝</h1>
+        <h1 class="title"></h1>
         <a class="button button-link button-nav pull-right _edit">
             编辑
         </a>
@@ -244,6 +501,7 @@
                     <ul>
                         <li class="item-content">
                             <div class="item-media">
+
                                 <img src="image/pageImg/index/borrow_book01.jpg" width="114">
                             </div>
                             <div class="item-inner">
@@ -372,7 +630,7 @@
         </div>
     </div>
     <div class="_borrowFooter">
-        <div class="_borrowFooterBtn">
+        <div class="_borrowFooterBtn _selectAll">
             <div class="_btnSelect">
                 <span>
                     <img src="image/pageImg/index/borrow_disSelect.png">
@@ -380,13 +638,13 @@
                 <span>全选</span>
             </div>
         </div>
-        <div class="_borrowFooterBtn">
+        <div class="_borrowFooterBtn _cancel">
             <div class="_btn _btn1">取消借阅</div>
         </div>
-        <div class="_borrowFooterBtn">
+        <div class="_borrowFooterBtn _receive">
             <div class="_btn _btn2">收到图书</div>
         </div>
-        <div class="_borrowFooterBtn">
+        <div class="_borrowFooterBtn _goOn">
             <div class="_btn _btn3">续借图书</div>
         </div>
     </div>
@@ -396,21 +654,21 @@
 <div id="_find_popUp" class="popup">
     <div class="container">
         <div class="wave ripple danger">
-            <div class="circle" style="background-color: rgb(213,32,52,0.25);"></div>
-            <div class="circle" style="background-color: rgb(213,32,52,0.65);"></div>
-            <div class="circle" style="background-color: rgb(213,32,52,1);"></div>
+            <div class="circle" style="background-color: red; opacity: 1;"></div>
+            <div class="circle" style="background-color: red; opacity: 0.65;"></div>
+            <div class="circle" style="background-color: red; opacity: 0.25;"></div>
         </div>
     </div>
     <div class="_content">
         <img src="image/pageImg/index/find_location.png">
     </div>
-    <div class="content">
+    <div class="content _fixContent">
         <img src="image/pageImg/index/find_bg.jpg">
     </div>
 </div>
 
 <!-- class popUp -->
-<div id="_class_popUp_zx" class="popup">
+<div id="_class_popUp_zx" class="popup _class_popUp">
     <header class="bar bar-nav">
         <a class="button button-link button-nav pull-left close-popup" data-transition='slide-out'>
             <span class="icon icon-left"></span>
@@ -418,10 +676,211 @@
         <h1 class="title">哲学类</h1>
     </header>
     <div class="content">
+        <div class="buttons-tab">
+            <a href="#classTab1_zx" class="tab-link active button">畅销<span></span></a>
+            <a href="#classTab2_zx" class="tab-link button">好评<span></span></a>
+            <a href="#classTab3_zx" class="tab-link button">价格<span></span></a>
+            <a href="#classTab4_zx" class="tab-link button">最新<span></span></a>
+        </div>
+        <div class="content-block">
+            <div class="tabs">
+                <!-- tab1 -->
+                <div id="classTab1_zx" class="tab active">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- tab2 -->
+                <div id="classTab2_zx" class="tab">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tab3 -->
+                <div id="classTab3_zx" class="tab">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tab4 -->
+                <div id="classTab4_zx" class="tab">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<div id="_class_popUp_sh" class="popup">
+<div id="_class_popUp_sh" class="popup _class_popUp">
     <header class="bar bar-nav">
         <a class="button button-link button-nav pull-left close-popup" data-transition='slide-out'>
             <span class="icon icon-left"></span>
@@ -429,10 +888,211 @@
         <h1 class="title">社会科学类</h1>
     </header>
     <div class="content">
+        <div class="buttons-tab">
+            <a href="#classTab1_sh" class="tab-link active button">畅销<span></span></a>
+            <a href="#classTab2_sh" class="tab-link button">好评<span></span></a>
+            <a href="#classTab3_sh" class="tab-link button">价格<span></span></a>
+            <a href="#classTab4_sh" class="tab-link button">最新<span></span></a>
+        </div>
+        <div class="content-block">
+            <div class="tabs">
+                <!-- tab1 -->
+                <div id="classTab1_sh" class="tab active">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- tab2 -->
+                <div id="classTab2_sh" class="tab">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tab3 -->
+                <div id="classTab3_sh" class="tab">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tab4 -->
+                <div id="classTab4_sh" class="tab">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<div id="_class_popUp_fl" class="popup">
+<div id="_class_popUp_fl" class="popup _class_popUp">
     <header class="bar bar-nav">
         <a class="button button-link button-nav pull-left close-popup" data-transition='slide-out'>
             <span class="icon icon-left"></span>
@@ -440,16 +1100,227 @@
         <h1 class="title">法律类</h1>
     </header>
     <div class="content">
+        <div class="buttons-tab">
+            <a href="#classTab1_fl" class="tab-link active button">畅销<span></span></a>
+            <a href="#classTab2_fl" class="tab-link button">好评<span></span></a>
+            <a href="#classTab3_fl" class="tab-link button">价格<span></span></a>
+            <a href="#classTab4_fl" class="tab-link button">最新<span></span></a>
+        </div>
+        <div class="content-block">
+            <div class="tabs">
+                <!-- tab1 -->
+                <div id="classTab1_fl" class="tab active">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- tab2 -->
+                <div id="classTab2_fl" class="tab">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tab3 -->
+                <div id="classTab3_fl" class="tab">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tab4 -->
+                <div id="classTab4_fl" class="tab">
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_08.jpg">
+                                <p>桃花扇</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_09.jpg">
+                                <p>罗密欧与朱丽叶</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_03.jpg">
+                                <p>精神现象学</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_04.jpg">
+                                <p>三毛全集：滚滚红尘</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_05.jpg">
+                                <p>编剧的核心技巧</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_06.jpg">
+                                <p style="margin-top: -0.4rem;">观音</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_01.jpg">
+                                <p>存在与虚无</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_02.jpg">
+                                <p>语言、真理与逻辑</p>
+                            </div>
+                            <div class="col-33">
+                                <img src="image/pageImg/index/class_book_07.jpg">
+                                <p>牡丹亭</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- right popup -->
+<div class="panel panel-right panel-reveal theme-dark" id='panel-right'>
+    <div class="content-block">
+        <p></p>
+        <p>欢迎您登陆</p>
+        <p><a href="#" class="close-panel">关闭</a></p>
+    </div>
+    <div class="list-block">
     </div>
 </div>
 
 
-
 <script type='text/javascript' src='js/jquery.min.js' charset='utf-8'></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script type='text/javascript' src='js/light7.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/light7-swiper.min.js' charset='utf-8'></script>
-
 <script type="text/javascript" src="js/iSlider/queue.js"></script>
 <script type="text/javascript" src="js/iSlider/iSlider.min.js"></script>
 <script type="text/javascript" src="js/iSlider/iSlider.animate.min.js"></script>

@@ -2,7 +2,7 @@ $(function () {
     loadingLoginPage();
 });
 /**
- * loading
+ * loginloading
  */
 var loadingLoginPage = function(){
     setTimeout(function () {

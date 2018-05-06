@@ -204,5 +204,17 @@ var openSearchPage = function () {
     $('._search').show();
     //  _search_footer_info
     $('#_search_footer_info').removeClass('hide');
-
 }
+
+/**
+ * 跳转界面
+ */
+$('#hrefGroup li').each(function () {
+    // $(this).find('p').data('href')
+    $(this).find('p').on('click', function () {
+        window.open($(this).data('href'));
+    });
+});
+$('#schoolIndex').on('click', function(){
+    window.open($(this).data('href'));
+});

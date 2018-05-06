@@ -58,13 +58,13 @@ $('._loginButton').on('click', function () {
     var isLogin= true;
     var username = $('#_username').val();
     var password = $('#_password').val();
-    if(username == ''){
-        $.toast("请输入借阅证账号");
-        isLogin = false;
-    }else if(password == ''){
-        $.toast("请输入借阅证密码");
-        isLogin = false;
-    }
+    // if(username == ''){
+    //     $.toast("请输入借阅证账号");
+    //     isLogin = false;
+    // }else if(password == ''){
+    //     $.toast("请输入借阅证密码");
+    //     isLogin = false;
+    // }
 
     if(isLogin){
         $.router.loadPage("#index");

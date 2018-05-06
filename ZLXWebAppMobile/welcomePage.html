@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/light7.min.css">
     <link rel="stylesheet" href="css/pageCss/loading.css">
     <link rel="stylesheet" href="css/swiper/swiper.min.css">
     <script>
@@ -26,14 +27,16 @@
         <div class="swiper-slide"><img src="image/pageImg/loading_01.jpg"></div>
         <div class="swiper-slide"><img src="image/pageImg/loading_02.jpg"></div>
         <div class="swiper-slide"><img src="image/pageImg/loading_03.jpg"></div>
-        <div class="swiper-slide"><img src="image/pageImg/loading_04.jpg"></div>
+        <div class="swiper-slide" onclick="window.location.href='/index.html';"><img id="_openLogin" src="image/pageImg/loading_04.jpg"></div>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
 </div>
+<script type='text/javascript' src='js/light7.min.js' charset='utf-8'></script>
 <script type='text/javascript' src="js/swiper/swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
+        preventLinksPropagation : false,
         pagination: {
             el: '.swiper-pagination'
         }

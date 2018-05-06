@@ -282,7 +282,7 @@
 }
 .islider-outer > li{
 
-    height: calc(100% + 1rem);
+    height: calc(100% + 1.5rem);
 }
 .iEl {
     position: relative;
@@ -291,7 +291,7 @@
 }
 .iEl>ul>li {
     border-radius: 15px;
-    top: -0.5rem;
+    top: -0.7rem;
 }
 .iEl>ul>li>img {
     opacity: 1 !important;
@@ -641,7 +641,8 @@
 ._minePage .searchbar img{
     z-index: 1;
     position: relative;
-    top: -2.7rem;
+    /*top: -2.7rem;*/
+    top: -1.9rem;
     width: calc(100% + 1rem);
 }
 ._minePage .search-input{
@@ -684,4 +685,35 @@
 ._searchPage ._searchInfo ._searchBook:active{
     background-color: #d0d0d0;
 }
-/* Search page  end */
+/* Search page end */
+
+/* add */
+._others{
+    height: 1.2rem !important;
+}
+._otherPop{
+    background: rgba(0,0,0,0);
+}
+._otherPop ._othersImg{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 0.3rem;
+}
+._otherPop ._othersImg img{
+    width: 100%;
+    float: right;
+}
+._otherPop .popover-inner{
+    padding: 0.3rem;
+    background-color: #fff;
+    float: right;
+    width: 5rem;
+    height: 6rem;
+    border-radius: 0.5rem;
+}
+._QCPage{
+    top: 0 !important;
+    left: 0 !important;
+}
+
+/* add */

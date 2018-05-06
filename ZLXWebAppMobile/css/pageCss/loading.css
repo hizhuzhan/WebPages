@@ -43,7 +43,7 @@ body {
     background: #f03e6c !important;
 }
 .swiper-container-horizontal>.swiper-pagination-bullets{
-    bottom: 10px !important;
+    bottom: auto !important;
     top: 9.5% !important;
 }
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{

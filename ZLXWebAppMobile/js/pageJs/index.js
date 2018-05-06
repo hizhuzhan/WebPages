@@ -274,10 +274,6 @@ $('._backSearch').on('click', function(){
     $('._searchBar .search-input').addClass('col-90');
 });
 
-$('._others').on('click', function(){
-    $.openPanel("#panel-right");
-});
-
 /**
  * search page end
  */

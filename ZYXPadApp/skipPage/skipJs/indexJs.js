@@ -3,7 +3,7 @@ var mapType = '';
 $(function () {
     setTimeout(function () {
         $('._loading_page').fadeOut();
-    }, 2000);
+    }, 5000);
     // $('#pageIndex').show();
     changeBtnImg('_jin', 'jin');
     changeBtnImg('_yuan', 'yuan');
@@ -11,7 +11,14 @@ $(function () {
     changeBtnImg('_min', 'min');
     changeBtnImg('_xin', 'xin');
     changeBtnImg('_xian', 'xian');
+
+    playBgMusic();
+
 });
+
+var playBgMusic = function(){
+    $('#_bgMusic')[0].play();
+};
 
 $('._openIn').on('click', function () {
     $('#_in')[0].play();

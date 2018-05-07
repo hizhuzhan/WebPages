@@ -323,3 +323,7 @@ $('#_class_book_03').on('click', function(){
 /**
  * class popUp page js end
  */
+
+$('._bookOpenPopup').on('click', function () {
+    $.popup('#_libary_info_page');
+});

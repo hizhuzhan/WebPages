@@ -88,7 +88,7 @@
 ._page_map ._map_footerBtn{
   position: absolute;
   width: 344px;
-  bottom: 5px;
+  bottom: -15px;
   left: calc(50% - 172px);
 }
 ._page_map>._map_footerBtn>img{

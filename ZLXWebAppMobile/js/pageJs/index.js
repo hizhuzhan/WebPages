@@ -317,10 +317,10 @@ $('#_find_popUp_click').on('click', function(){
  * class popUp page js start
  */
 $('#_class_book_01').on('click', function(){
-    $.popup('#_class_popUp_zx');
+    $.popup('#_class_popUp_sh');
 });
 $('#_class_book_02').on('click', function(){
-    $.popup('#_class_popUp_sh');
+    $.popup('#_class_popUp_zx');
 });
 $('#_class_book_03').on('click', function(){
     $.popup('#_class_popUp_fl');
@@ -331,4 +331,32 @@ $('#_class_book_03').on('click', function(){
 
 $('._bookOpenPopup').on('click', function () {
     $.popup('#_libary_info_page');
+});
+
+
+/**
+ * bookInfo
+ */
+$('._openBookInfo_sh').on('click', function () {
+    $('._bookInfo_sh').fadeIn(100);
+});
+
+$('._close_bookInfo_sh').on('click', function () {
+    $('._bookInfo_sh').fadeOut(100);
+});
+
+$('._openBookInfo_fl').on('click', function () {
+    $('._bookInfo_fl').fadeIn(100);
+});
+
+$('._close_bookInfo_fl').on('click', function () {
+    $('._bookInfo_fl').fadeOut(100);
+});
+
+$('._openBookInfo_zx').on('click', function () {
+    $('._bookInfo_zx').fadeIn(100);
+});
+
+$('._close_bookInfo_zx').on('click', function () {
+    $('._bookInfo_zx').fadeOut(100);
 });

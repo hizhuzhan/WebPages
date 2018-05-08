@@ -17,8 +17,8 @@
       <file leaf-file-name="indexPage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skipPage/indexPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="212" column="42" lean-forward="true" selection-start-line="212" selection-start-column="42" selection-end-line="212" selection-end-column="42" />
+            <state relative-caret-position="297">
+              <caret line="207" column="0" lean-forward="true" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -163,12 +163,12 @@
       <workItem from="1525629973535" duration="269000" />
       <workItem from="1525631557899" duration="5000" />
       <workItem from="1525710909204" duration="2368000" />
-      <workItem from="1525716516171" duration="432000" />
+      <workItem from="1525716516171" duration="607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7576000" />
+    <option name="totallyTimeSpent" value="7751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -375,8 +375,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skipPage/indexPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="212" column="42" lean-forward="true" selection-start-line="212" selection-start-column="42" selection-end-line="212" selection-end-column="42" />
+        <state relative-caret-position="297">
+          <caret line="207" column="0" lean-forward="true" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

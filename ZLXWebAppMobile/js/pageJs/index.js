@@ -56,6 +56,7 @@ var loadingISlider = function(){
 
 $('._loginButton').on('click', function () {
     var isLogin= true;
+    var isLoadingSlider = true;
     var username = $('#_username').val();
     var password = $('#_password').val();
     // if(username == ''){
@@ -68,10 +69,14 @@ $('._loginButton').on('click', function () {
 
     if(isLogin){
         $.router.loadPage("#index");
-        setTimeout(function () {
-            loadingISlider();
-            $('._indexBars').show();
-        }, 10);
+        if(isLoadingSlider){
+            setTimeout(function () {
+                loadingISlider();
+                $('._indexBars').show();
+                isLoadingSlider = false;
+            }, 10);
+        }
+
     }
 
 

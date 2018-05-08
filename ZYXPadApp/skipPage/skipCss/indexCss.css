@@ -90,6 +90,7 @@
   width: 344px;
   bottom: 5px;
   left: calc(50% - 172px);
+  z-index: 100;
 }
 ._page_map>._map_footerBtn>img{
   width: 100%;

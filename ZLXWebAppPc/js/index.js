@@ -187,6 +187,7 @@ var contentListStyleChange = function(dom){
  */
 var openSearchPage = function () {
     $('#_index_head').removeClass('hide');
+    $('#_index_head').show();
     $('.swiper-container').hide();
 
     //  hide redLine

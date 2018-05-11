@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/swiper/swiper.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>中国戏曲学院·图书馆</title>
@@ -61,14 +62,26 @@
         <div class="wrapper wrapper-content ">
             <div class="col-xs-12">
                 <div class="img_div">
-                    <div id="_img_div_head" class="img_div_head">
+                    <div id="_img_div_head" class="img_div_head" style="z-index:  10;">
                         <p>www.nacta.edu.cn</p>
                         <div id="schoolIndex" data-href="https://www.nacta.edu.cn/"><p>学院主页</p></div>
                     </div>
-                    <img id="_index_title" class="index_title" src="image/index_title.png">
-                    <img id="_index_details" class="index_details" src="image/index_details.png">
-                    <img id="_index_head" class="index_head" src="image/index_head.jpg" class="img-responsive">
+                    <img id="_index_title" class="index_title" src="image/index_title.png" style="z-index:  10;">
+                    <img id="_index_details" class="index_details" src="image/index_details.png" style="z-index:  10;">
+                    <img id="_index_head" class="index_head hide" src="image/index_head.jpg" class="img-responsive">
+
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="image/index_head.jpg" class="img-responsive" style="width: 100%"></div>
+                            <div class="swiper-slide"><img src="image/index_head.jpg" class="img-responsive" style="width: 100%"></div>
+                            <div class="swiper-slide"><img src="image/index_head.jpg" class="img-responsive" style="width: 100%"></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -391,6 +404,15 @@
 </body>
 
 <script src="js/jquery.min.js"></script>
+<script src="js/swiper/swiper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/index.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination'
+        }
+    });
+</script>
 </html>

@@ -1,0 +1,10 @@
+{
+  "path": "当前位置：首页 >联系我们",
+  "list": "<ul class=\"nav navbar-nav\"><li id=\"contact_01\"><span><img src=\"image/unfold.png\"></span><p>联系我们</p></li></ul>",
+  "content": {
+    "contact_01": {
+      "title": "联系我们",
+      "content": "<p style=\"text-indent: 0; line-height: 30px\">欢迎广大读者通过图书馆网站、电子信箱、电话等多种途径向图书馆反馈各种意见及建议。</p><p style=\"text-indent: 0; line-height: 30px\">图书馆电子信箱：Email：tsg@nacta.edu.cn</p><p style=\"text-indent: 0; line-height: 30px\">图书馆馆长办公室电话：010-63351525</p><p style=\"text-indent: 0; line-height: 30px\">图书馆办公室电话：010-63337573</p><p style=\"text-indent: 0; line-height: 30px\">采编部电话：010-63336717   </p><p style=\"text-indent: 0; line-height: 30px\">流通部电话：010-63337370</p><p style=\"text-indent: 0; line-height: 30px\">音像部电话：010-63351221</p><p style=\"text-indent: 0; line-height: 30px\">戏曲文献研究所电话：010-63337679</p><p style=\"text-indent: 0; line-height: 30px\">信息咨询部电话：010-63339310（分机：8310）</p>"
+    }
+  }
+}

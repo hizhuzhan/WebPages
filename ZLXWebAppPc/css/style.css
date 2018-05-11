@@ -513,4 +513,26 @@
     line-height: 13px;
 }
 /* index _footer end */
+/*.swiper-pagination-bullet{*/
 
+/*}*/
+/*.swiper-pagination>div:nth-child(1){*/
+    /*position: absolute;*/
+    /*right: 6rem;*/
+/*}*/
+/*.swiper-pagination>div:nth-child(2){*/
+    /*position: absolute;*/
+    /*right: 4rem;*/
+/*}*/
+/*.swiper-pagination>div:nth-child(3){*/
+    /*position: absolute;*/
+    /*right: 2rem;*/
+/*}*/
+
+.swiper-pagination-bullets{
+    padding-left: 80%;
+    padding-bottom: 3%;
+}
+.hide{
+    display: none;
+}

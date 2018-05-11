@@ -1,0 +1,14 @@
+{
+  "path": "当前位置：首页 > 下载专区",
+  "list": "<ul class=\"nav navbar-nav\"><li id=\"download_01\"><span><img src=\"image/unfold.png\"></span><p>阅读器下载</p></li><li id=\"download_02\"><span><img src=\"image/unfold.png\"></span><p>常用软件下载</p></li></ul>",
+  "content": {
+    "download_01": {
+      "title": "阅读器下载",
+      "content": "<p style=\"text-indent: 0; line-height: 40px; border-bottom: 1px dashed #333; margin: 5px 0 5px\">方正Apabi Reader：支持方正电子图书阅览</p><span style=\"float: right; margin-top: -36px;\">2015-01-08 11:13:00</span><p style=\"text-indent: 0; line-height: 40px; border-bottom: 1px dashed #333;\">维普全文浏览器：中文科技期刊数据库全文文献浏览器</p><span style=\"float: right; margin-top: -36px;\">2015-01-05 02:29:00</span><p style=\"text-indent: 0; line-height: 40px; border-bottom: 1px dashed #333;\">超星电子图书阅读器：阅读超星电子图书专用</p><span style=\"float: right; margin-top: -36px;\">2015-01-05 02:17:00</span>"
+    },
+    "download_02": {
+      "title": "常用软件下载",
+      "content": "<p style=\"text-indent: 0; line-height: 40px; border-bottom: 1px dashed #333; margin: 5px 0 5px\">Office 2000</p><span style=\"float: right; margin-top: -36px;\">2015-01-05 02:22:00</span><p style=\"text-indent: 0; line-height: 40px; border-bottom: 1px dashed #333;\">网际快车</p><span style=\"float: right; margin-top: -36px;\">2015-01-05 02:21:00</span><p style=\"text-indent: 0; line-height: 40px; border-bottom: 1px dashed #333;\">搜狗拼音</p><span style=\"float: right; margin-top: -36px;\">2015-01-05 02:21:00</span><p style=\"text-indent: 0; line-height: 40px; border-bottom: 1px dashed #333;\">Acrobat Reader：PDF格式文件的必备阅读器</p><span style=\"float: right; margin-top: -36px;\">2015-01-05 02:20:00</span>"
+    }
+  }
+}

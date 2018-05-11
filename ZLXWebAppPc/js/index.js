@@ -14,6 +14,9 @@ $(function () {
  */
 $('#index').on('click', function () {
     addRedLine(this);
+    $('.swiper-container').show();
+    $('#_index_head').hide();
+
     //  中国戏剧学院图书馆
     $('#_img_div_head').show();
     //  查看详情
@@ -180,9 +183,12 @@ var contentListStyleChange = function(dom){
 }
 
 /**
- * 打卡搜索页面
+ * 打开搜索页面
  */
 var openSearchPage = function () {
+    $('#_index_head').removeClass('hide');
+    $('.swiper-container').hide();
+
     //  hide redLine
     $('#nav').find('div').removeClass('redLine');
     //  show img div
@@ -218,3 +224,6 @@ $('.hrefGroup li').each(function () {
 $('#schoolIndex').on('click', function(){
     window.open($(this).data('href'));
 });
+
+
+

@@ -1,0 +1,22 @@
+{
+  "path": "当前位置：首页 > 规章制度",
+  "list": "<ul class=\"nav navbar-nav\"><li id=\"literLoaning\"><span><img src=\"image/unfold.png\"></span><p>文献借阅规规章</p></li><li id=\"compensate\"><span><img src=\"image/unfold.png\"></span><p>文献遗失和损坏赔偿办法</p></li><li id=\"readingRules\"><span><img src=\"image/unfold.png\"></span><p>阅览规章</p></li><li id=\"workingRules\"><span><img src=\"image/unfold.png\"></span><p>工作规章</p></li></ul>",
+  "content": {
+    "literLoaning": {
+      "title": "文献借阅规规章",
+      "content": "<p>信息正在整理中...</p>"
+    },
+    "compensate": {
+      "title": "文献遗失和损坏赔偿办法",
+      "content": "<p>图书馆各类文献资料属国家财产，为保证文献资料完整，防止损失，保障读者的正常使用，在读者借阅期间，如对图书遗失或损坏，借阅者须负责赔偿责任。</p><p style=\"margin: 15px 0 15px 0;\">一、遗失图书资料赔偿办法</p><p>遗失本馆图书应立即声明并积极寻找。原则上要求赔偿完全相同的同版图书（或经同意后用新版图书）赔偿。限期1个月购买赔偿的图书资料，在此期间不能外借图书。如在规定时间内无法赔偿完全相同的同版图书（经同意后的新版图书），则按以下标准赔偿：</p><p>1、国内出版图书，根据年代不同，按照以下赔付标准赔偿：</p><p>（1）1950年—1966年出版的图书，按照原书价格50—40倍赔偿。</p><p>（2）1967年—1986年出版的图书，按照原书价格40—30倍赔偿。</p><p>（3）1987年—2000年出版的图书，按照原书价格20—10倍赔偿。</p><p>（4）2000年至今出版的图书，按照原书价格5—2倍赔偿。</p><p>（5）成套多卷本，遗失其中1册或数册，根据上述年代做相应倍数赔偿，赔偿后不得索取其他卷册。</p><p>2、进口原版的外文图书，根据年代不同，按照以下赔付标准赔偿：</p><p>（1）1950年—2000年出版的图书，按照原书价格50—10倍赔偿。</p><p>（2）2000年至今出版的图书，按照原书价格5—2倍赔偿。</p><p>（3）成套多卷本，遗失其中1册或数册，根据上述年代做相应倍数赔偿，赔偿后不得索取其他卷册。</p><p>3、未标明价格的书刊资料，参考同类书刊资料的价格赔偿。</p><p>中文报刊：单行本期刊按全年合订本1倍价格赔偿；合订本期刊按合订本3倍价格赔偿。</p><p>4、凡未办理借阅手续，擅自将图书资料带出阅览室或书库者，将按学院相关规定处理。</p><p style=\"margin: 15px 0 15px 0;\">二、损坏书刊资料赔偿办法</p><p>对批划、涂改、污损普通书刊资料者,根据情节轻重赔偿5-20元，对图书污损严重影响阅读者，按书刊资料实际价值赔偿。</p><p>对割页、撕扯等严重损坏书刊资料者须赔偿原书，如在规定的时间内无法赔偿原书，按书刊资料  实际价值的2-5倍赔偿。</p>"
+    },
+    "readingRules": {
+      "title": "阅览规章",
+      "content": "<img style=\"width: 261px; height: 178px; float: right;\" src=\"image/readingRules_01.jpg\"><p style=\"text-indent: 0; margin-bottom: 48px;\">一、读者进入阅览室请把包和大衣放入存包柜中。</p><p style=\"text-indent: 0; margin-bottom: 48px;\">二、关闭手机或将手机调至震荡管理，保持室内安静。</p><p style=\"text-indent: 0; margin-bottom: 48px;\">三、不准带食品、饮料入内，保持室内清洁卫生。</p><p style=\"text-indent: 0; margin-bottom: 48px;\">四、室内开架期刊和报纸可自行取阅，每次限取阅两种，阅后应放回原处，以保证他人阅览。</p><p style=\"text-indent: 0; margin-bottom: 48px;\">五、阅览室内期刊和报纸一律不外借，如需复印请与工作人员联系办理手续后方可将资料带出阅览室，复印后应立即归还。</p><p style=\"text-indent: 0; margin-bottom: 48px;\">六、读者应爱护报刊资料，不得撕损、剪裁，否则将按期刊、报纸的全年价格处以罚款。</p><p style=\"text-indent: 0; margin-bottom: 48px;\">七、读者应服从工作人员管理。</p>"
+    },
+    "workingRules": {
+      "title": "工作规章",
+      "content": "<p style=\"margin-bottom: 45px\">图书馆是一个传播知识与文明的场所。“一切为了读者”是图书馆服务的根本宗旨。图书馆工作人员应自觉遵守以下规定：</p><p style=\"margin-bottom: 45px; text-indent: 0\">一、树立全心全意为读者服务的理念，主动热情接待每一位读者，耐心细致地解答读者所提出的各种问题，不敷衍，不推诿。</p><p style=\"margin-bottom: 45px; text-indent: 0\">二、举止文明，仪表端庄，衣容整洁，微笑服务。</p><p style=\"margin-bottom: 45px; text-indent: 0\">三、遵守劳动纪律，不迟到,不早退，上班时不做与工作无关的事情，按时完成工作任务，保证工作质量。</p><p style=\"margin-bottom: 45px; text-indent: 0\">四、营造图书馆良好的阅读环境。馆内保持安静，不大声喧哗，不随地吐痰、乱扔纸屑，随时保持环境整洁卫生。</p><p style=\"margin-bottom: 45px; text-indent: 0\">五、团结协作，以诚相待，积极向上，不断进取。</p><p style=\"margin-bottom: 45px; text-indent: 0\">六、认真执行安全责任制度，每位工作人员都有责任制止不良行为,保持图书馆整体良好风貌。</p><img src=\"image/workingRules_01.jpg\" style=\"width: 331px; height: 221px\">"
+    }
+  }
+}

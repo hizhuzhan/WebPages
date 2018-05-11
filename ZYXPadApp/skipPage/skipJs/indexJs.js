@@ -3,7 +3,8 @@ var mapType = '';
 $(function () {
     setTimeout(function () {
         $('._loading_page').fadeOut();
-    }, 5000);
+        playBgMusic();
+    }, 3000);
     // $('#pageIndex').show();
     changeBtnImg('_jin', 'jin');
     changeBtnImg('_yuan', 'yuan');
@@ -12,7 +13,7 @@ $(function () {
     changeBtnImg('_xin', 'xin');
     changeBtnImg('_xian', 'xian');
 
-    playBgMusic();
+
 
 });
 
